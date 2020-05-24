@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const Img = styled.img({
   paddingTop: "25%",
+  width: "24px",
+  height: "24px",
 });
 
 interface Props {

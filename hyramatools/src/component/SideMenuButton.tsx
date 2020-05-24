@@ -1,10 +1,23 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { Icon } from "component";
 
 const Separation = styled.div({
   marginTop: 4,
+});
+
+const Button = styled.button({
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  height: 48,
+  marginTop: 16,
+  marginBottom: 16,
+  border: "none",
+  outline: "none",
+  alignItems: "center",
+  backgroundColor: "transparent",
 });
 
 interface Props {
@@ -20,28 +33,13 @@ class SideMenuButton extends React.Component<Props> {
 
   render() {
     return (
-      <button style={styles.container}>
+      <Button>
         <Icon src={this.props.src} />
         <Separation />
-        <text>{this.props.title}</text>
-      </button>
+        <label>{this.props.title}</label>
+      </Button>
     );
   }
 }
-
-const styles: { [key: string]: CSSProperties } = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
-    height: 48,
-    marginTop: 16,
-    marginBottom: 16,
-    border: "none",
-    outline: "none",
-    alignItems: "center",
-    backgroundColor: "transparent",
-  },
-};
 
 export default SideMenuButton;

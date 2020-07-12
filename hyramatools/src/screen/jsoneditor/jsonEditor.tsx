@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import styled, { StyledComponent } from "styled-components";
-import { JsonNode } from "utils/json/jsonNode";
-import { JsonBeautify } from "utils/json/jsonUtils";
+import styled from "styled-components";
+import { getBeautifulJson } from "utils/json/jsonUtils";
 
 const Container = styled.div({
   justifyItems: "center",
@@ -18,19 +17,19 @@ const InputArea = styled.textarea({
   display: "flex",
   resize: "none",
   width: 500,
-  height: 500,
+  height: 800,
 });
 
 const OutputArea = styled.textarea({
   display: "flex",
   resize: "none",
   width: 500,
-  height: 500,
+  height: 800,
 });
 
 let pressKey: KeyboardEvent;
 
-function JsonFormatter() {
+function JsonEditor() {
   const inputAreaRef = useRef<HTMLTextAreaElement | null>(null);
   const [tabSize, setTabSize] = useState(2);
   const [inputText, setInputText] = useState("");
@@ -64,9 +63,6 @@ function JsonFormatter() {
     return { text: text, cursorPos: cursorPos };
   }
 
-  function checkFormat() {}
-
-  function beautify() {}
   return (
     <Container>
       <AreaContainer>
@@ -81,10 +77,13 @@ function JsonFormatter() {
             pressKey = nativeEvent;
           }}
           onChange={(event: any) => {
+            console.log(event.nativeEvent);
             setInputText(event.target.value);
+            console.log(event.target.value.split("\n").length);
             try {
-              const node = new JsonNode("root", JSON.parse(event.target.value));
-              setOutputText(JsonBeautify(node, 2));
+              const json = JSON.parse(event.target.value);
+              const beautifulJson = getBeautifulJson(json, 2);
+              setOutputText(beautifulJson);
             } catch (error) {
               setOutputText("ERROR");
             }
@@ -97,4 +96,4 @@ function JsonFormatter() {
   );
 }
 
-export default JsonFormatter;
+export default JsonEditor;

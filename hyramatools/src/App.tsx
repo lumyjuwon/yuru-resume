@@ -5,9 +5,7 @@ import styled from "styled-components";
 import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
 
 import { SideMenuButton, IconButton } from "component";
-import { JsonFormatter } from "./screen/inedx";
-import { JsonNode } from "./utils/json/jsonNode";
-import { JsonBeautify } from "./utils/json/jsonUtils";
+import { JsonEditor, JavascriptEditor } from "screen";
 
 const Container = styled.div({
   paddingLeft: 16,
@@ -55,20 +53,6 @@ const ScreenContainer = styled.div({
 });
 
 function App() {
-  console.log("render");
-  // const json = {
-  //   A: "D",
-  //   B: "F",
-  //   C: { D: "G" },
-  //   Q: { 1: "A", 2: "B" },
-  //   F: { 1: { 2: { 3: { 4: "GOOD" } } } },
-  //   R: [{ S: "A" }, { D: "F" }, 1, { D: "F" }],
-  //   E: [{ D: "W" }, { E: { A: { Q: [{ D: "A" }] } } }, 30, "S"],
-  // };
-
-  // const node: JsonNode = new JsonNode("root", json);
-  // JsonBeautify(node, 8);
-
   return (
     <BrowserRouter>
       <Container>
@@ -77,17 +61,20 @@ function App() {
         </Header>
         <ContentContainer>
           <LeftSide>
-            <Link to="/jsonformatter">
-              <SideMenuButton src={Test2} title={"Formatter"} />
+            <Link to="/json_editor">
+              <SideMenuButton src={Test2} title={"JsonEditor"} />
             </Link>
-            <Link to="/jsonformatter">
-              <SideMenuButton src={Test} title={"Formatter"} />
+            <Link to="/javascript_editor">
+              <SideMenuButton src={Test} title={"JavascriptEditor"} />
             </Link>
           </LeftSide>
           <Screen>
             <ScreenContainer>
               <Switch>
-                <Route path="/jsonformatter" component={JsonFormatter} />
+                <Route path="/json_editor" component={JsonEditor} />
+              </Switch>
+              <Switch>
+                <Route path="/javascript_editor" component={JavascriptEditor} />
               </Switch>
             </ScreenContainer>
           </Screen>

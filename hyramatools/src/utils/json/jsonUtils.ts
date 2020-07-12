@@ -1,5 +1,3 @@
-import { JsonNode } from "./jsonNode";
-
 let output: string = "";
 
 function createTabWithSize(size: number) {
@@ -11,77 +9,58 @@ function createTabWithSize(size: number) {
   return tab;
 }
 
-function beautify(node: JsonNode, depthTab: string, tab: string) {
-  const child = node.getChild();
-  const childLength = child?.length - 1;
+function beautifyJson(
+  json: any,
+  depthTab: string,
+  tab: string,
+  showKey: boolean = true
+) {
+  const keys = Object.keys(json);
+  const length = keys.length - 1;
 
-  child?.forEach((childNode: JsonNode, index: number) => {
-    const childValue = childNode.getValue();
+  keys.map((key, index) => {
+    const value = json[key];
 
-    if (childValue !== undefined) {
-      if (childValue instanceof Array) {
-        // Open Array
-        output += `${depthTab}"${childNode.getKey()}": [\n`;
-
-        const childValueLength = childValue.length - 1;
-        childValue.map((childValueNode, index) => {
-          if (childValueNode instanceof JsonNode) {
-            const childValueNodeTabSize = depthTab + tab;
-            output += `${childValueNodeTabSize}{\n`;
-            beautify(childValueNode, childValueNodeTabSize + tab, tab);
-            output += `\n${childValueNodeTabSize}}`;
-          } else if (typeof childValueNode === "string") {
-            output += `${depthTab}${depthTab}"${childValueNode}"`;
-          } else if (typeof childValueNode === "number") {
-            output += `${depthTab}${depthTab}${childValueNode}`;
-          }
-          output += childValueLength == index ? "" : ",\n";
-        });
-
-        // Close Array
-        output += `\n${depthTab}]${childLength == index ? "" : ",\n"}`;
+    if (typeof value === "string") {
+      if (showKey) {
+        output += `${depthTab}"${key}": "${value}"`;
       } else {
-        output +=
-          `${depthTab}"${childNode.getKey()}": "${childNode.getValue()}"` +
-          (childLength == index ? "" : ",\n");
+        output += `${depthTab}"${value}"`;
       }
+      output += `${length === index ? "" : ",\n"}`;
+    } else if (typeof value === "number") {
+      if (showKey) {
+        output += `${depthTab}"${key}": ${value}`;
+      } else {
+        output += `${depthTab}${value}`;
+      }
+      output += `${length === index ? "" : ",\n"}`;
+    } else if (value instanceof Array) {
+      if (showKey) {
+        output += `${depthTab}"${key}": [\n`;
+      } else {
+        output += `${depthTab}[\n`;
+      }
+      beautifyJson(value, depthTab + tab, tab, false);
+      output += `\n${depthTab}]${length === index ? "" : ",\n"}`;
     } else {
-      // Open Json
-      output += `${depthTab}"${childNode.getKey()}": {\n`;
-
-      beautify(childNode, depthTab + tab, tab);
-
-      // Close Json
-      output += `\n${depthTab}}${childLength == index ? "" : ",\n"}`;
+      if (showKey) {
+        output += `${depthTab}"${key}": {\n`;
+      } else {
+        output += `${depthTab}{\n`;
+      }
+      beautifyJson(value, depthTab + tab, tab);
+      output += `\n${depthTab}}${length === index ? "" : ",\n"}`;
     }
   });
 }
 
-export function JsonBeautify(node: JsonNode, tabSize: number): string {
+export function getBeautifulJson(json: any, tabSize: number) {
   const tab = createTabWithSize(tabSize);
 
   output = "{\n";
-  beautify(node, tab, tab);
+  beautifyJson(json, tab, tab);
   output += "\n}";
 
   return output;
 }
-
-// export function minifyJson(node: JsonNode, tabSize: number): void {
-//   const tab = createTabWithSize(tabSize);
-
-//   const child = node.getChild();
-//   const length = child?.length - 1;
-
-//   child?.forEach((node: JsonNode, index: number) => {
-//     if (node.getValue()) {
-//       output +=
-//         `"${node.getKey()}":"${node.getValue()}"` +
-//         (length == index ? "" : ",");
-//     } else {
-//       output += `"${node.getKey()}":{`;
-//       this.minify(node);
-//       output += "}" + (length == index ? "" : ",");
-//     }
-//   });
-// }

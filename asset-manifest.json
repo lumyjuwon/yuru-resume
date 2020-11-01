@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "./static/js/main.9d0c9153.chunk.js",
-    "main.js.map": "./static/js/main.9d0c9153.chunk.js.map",
+    "main.js": "./static/js/main.da5d5afe.chunk.js",
+    "main.js.map": "./static/js/main.da5d5afe.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.9a1fb154.js",
     "runtime-main.js.map": "./static/js/runtime-main.9a1fb154.js.map",
     "static/js/2.0aab5423.chunk.js": "./static/js/2.0aab5423.chunk.js",
     "static/js/2.0aab5423.chunk.js.map": "./static/js/2.0aab5423.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.755e06987c7f1581f418ea4cf69a86ea.js": "./precache-manifest.755e06987c7f1581f418ea4cf69a86ea.js",
+    "precache-manifest.e055f2ebd4c5363b3dd23ef92a407c37.js": "./precache-manifest.e055f2ebd4c5363b3dd23ef92a407c37.js",
     "service-worker.js": "./service-worker.js",
     "static/js/2.0aab5423.chunk.js.LICENSE.txt": "./static/js/2.0aab5423.chunk.js.LICENSE.txt",
     "static/media/Acquaint Fate.png": "./static/media/Acquaint Fate.6e8d8434.png",
@@ -199,6 +199,6 @@
   "entrypoints": [
     "static/js/runtime-main.9a1fb154.js",
     "static/js/2.0aab5423.chunk.js",
-    "static/js/main.9d0c9153.chunk.js"
+    "static/js/main.da5d5afe.chunk.js"
   ]
 }

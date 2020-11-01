@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fce7900f376d3575b00eada1a23fa266",
+    "revision": "ed285f92eb68f6cb2afd401328dcbdf0",
     "url": "./index.html"
   },
   {
-    "revision": "89e1f23bee497a0f7589",
-    "url": "./static/js/2.ac05989d.chunk.js"
+    "revision": "d1fed1fd441262baf76a",
+    "url": "./static/js/2.0aab5423.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.ac05989d.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.0aab5423.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "49a732fe5ea755fc7f2e",
-    "url": "./static/js/main.81b440fa.chunk.js"
+    "revision": "f0fc158738df1bd4d9de",
+    "url": "./static/js/main.9d0c9153.chunk.js"
   },
   {
     "revision": "24dae4d41fba24b614c6",
@@ -22,6 +22,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6e8d8434ecd5087d60ddb9e08d61198d",
     "url": "./static/media/Acquaint Fate.6e8d8434.png"
+  },
+  {
+    "revision": "85fe05b16a53662832a573b9cf003914",
+    "url": "./static/media/Adventurer's Flower.85fe05b1.png"
+  },
+  {
+    "revision": "85fe05b16a53662832a573b9cf003914",
+    "url": "./static/media/Adventurer.85fe05b1.png"
   },
   {
     "revision": "f13c75a4cea51f7ae50a01633ce7b96c",
@@ -78,6 +86,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1142e4511ec42a6c0cb215c910b14ba8",
     "url": "./static/media/Blackcliff Warbow.1142e451.png"
+  },
+  {
+    "revision": "019bb2087f37dd018e247d6f2f7ca372",
+    "url": "./static/media/Bloodstained Black Plume.019bb208.png"
+  },
+  {
+    "revision": "019bb2087f37dd018e247d6f2f7ca372",
+    "url": "./static/media/Bloodstained Final Hour.019bb208.png"
+  },
+  {
+    "revision": "019bb2087f37dd018e247d6f2f7ca372",
+    "url": "./static/media/Bloodstained Flower of Iron.019bb208.png"
+  },
+  {
+    "revision": "019bb2087f37dd018e247d6f2f7ca372",
+    "url": "./static/media/Bloodstained Iron Mask.019bb208.png"
   },
   {
     "revision": "1f37bf39c4cb300b18cdf99dfb4421b9",
@@ -144,6 +168,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Emerald Orb.241a25db.png"
   },
   {
+    "revision": "359bf292f881fceac599c6e18029ba04",
+    "url": "./static/media/Exile's Circlet.359bf292.png"
+  },
+  {
+    "revision": "10f703cc383685f08cc8ec0f5c5ff09f",
+    "url": "./static/media/Exile's Feather.10f703cc.png"
+  },
+  {
+    "revision": "8d7c116528621629f5be03045d1a520d",
+    "url": "./static/media/Exile's Flower.8d7c1165.png"
+  },
+  {
+    "revision": "4bface7f93efa4f7e34b7d398cb02199",
+    "url": "./static/media/Exile's Goblet.4bface7f.png"
+  },
+  {
+    "revision": "6ed94340cb4357393c59e74d23ea2c18",
+    "url": "./static/media/Exile's Pocket Watch.6ed94340.png"
+  },
+  {
     "revision": "be18d31b14e24494eecd05483a3856ad",
     "url": "./static/media/Eye of Perception.be18d31b.png"
   },
@@ -172,10 +216,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Favonius Warbow.dc0f5fe9.png"
   },
   {
-    "revision": "21120ffa09529bb4393baadb397ea151",
-    "url": "./static/media/FemaleTraveler.21120ffa.png"
-  },
-  {
     "revision": "fa2b1b88705ee62d1defd248c3409b57",
     "url": "./static/media/Ferrous Shadow.fa2b1b88.png"
   },
@@ -188,6 +228,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Flying Paimon.2f97a542.gif"
   },
   {
+    "revision": "8e8d26b7ecbd0400f99a9ba851e78c1d",
+    "url": "./static/media/Gambler's Brooch.8e8d26b7.png"
+  },
+  {
+    "revision": "0515f93f4d70059d82071c7bc4bd52e7",
+    "url": "./static/media/Gladiator's Nostalgia.0515f93f.png"
+  },
+  {
     "revision": "562fce72276e89d8c464c429d1831b05",
     "url": "./static/media/Halberd.562fce72.png"
   },
@@ -196,8 +244,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Harbinger of Dawn.1aeeaf05.png"
   },
   {
+    "revision": "c188b981f2983e20ffd539a7bc74340f",
+    "url": "./static/media/Heart of Comeradeship.c188b981.png"
+  },
+  {
+    "revision": "c9f35fd123413b8134be077a7383d650",
+    "url": "./static/media/Hero's_Wit.c9f35fd1.png"
+  },
+  {
     "revision": "7b05d729fadab94b8d74fcc1dfa5150b",
     "url": "./static/media/Hunter's Bow.7b05d729.png"
+  },
+  {
+    "revision": "c52e3bada677ffb1afca88597e199031",
+    "url": "./static/media/Instructor's Brooch.c52e3bad.png"
+  },
+  {
+    "revision": "fdc42f3895083ca0cd6b7fe65083df1a",
+    "url": "./static/media/Instructor's Cap.fdc42f38.png"
+  },
+  {
+    "revision": "1564adc52de8cd09ed21726a3b34a2aa",
+    "url": "./static/media/Instructor's Feather Accessory.1564adc5.png"
+  },
+  {
+    "revision": "b4ef98c5fd5d8136e4795c38836d0599",
+    "url": "./static/media/Instructor's Pocket Watch.b4ef98c5.png"
+  },
+  {
+    "revision": "04a09fb28921559e6703498ec2cd6f55",
+    "url": "./static/media/Instructor's Tea Cup.04a09fb2.png"
   },
   {
     "revision": "3a038e6164485671af8b0cb67aa13eaa",
@@ -206,6 +282,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5ab42a509d700a417759977dbe1db819",
     "url": "./static/media/Iron Sting.5ab42a50.png"
+  },
+  {
+    "revision": "1c907d87ea41d228720f00ef7ce78352",
+    "url": "./static/media/Item_Adventurer's_Experience.1c907d87.png"
+  },
+  {
+    "revision": "b79cba989dfb170b9595e05ee14e677f",
+    "url": "./static/media/Item_Wanderer's_Advice.b79cba98.png"
   },
   {
     "revision": "11756a1e2eb16dad613cda02c0383c2d",
@@ -226,6 +310,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "23645ca1a3969bca985969859f4e308c",
     "url": "./static/media/Kunwu's Iris Rift.23645ca1.png"
+  },
+  {
+    "revision": "37561ded5acef14ba8f6a9333905204a",
+    "url": "./static/media/Lavawalker's Epiphany.37561ded.png"
+  },
+  {
+    "revision": "37561ded5acef14ba8f6a9333905204a",
+    "url": "./static/media/Lavawalker's Resolution.37561ded.png"
+  },
+  {
+    "revision": "37561ded5acef14ba8f6a9333905204a",
+    "url": "./static/media/Lavawalker's Torment.37561ded.png"
   },
   {
     "revision": "a4e1226360648fde577fbe3f5925eb1a",
@@ -252,8 +348,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Magic Guide.06ca7840.png"
   },
   {
-    "revision": "21120ffa09529bb4393baadb397ea151",
-    "url": "./static/media/MaleTraveler.21120ffa.png"
+    "revision": "695d76ca2a528cc47a421bc36690f4e5",
+    "url": "./static/media/Maiden's Distant Love.695d76ca.png"
+  },
+  {
+    "revision": "918ffb5f210d888d77db148e3e32a8b8",
+    "url": "./static/media/Maiden's Fading Beauty.918ffb5f.png"
+  },
+  {
+    "revision": "c289e3c8739b7b6241f198d37d2c1530",
+    "url": "./static/media/Maiden's Fleeting Leisure.c289e3c8.png"
+  },
+  {
+    "revision": "655fff96a88dca46db69d4562a85077a",
+    "url": "./static/media/Maiden's Heart-stricken Infatuation.655fff96.png"
+  },
+  {
+    "revision": "5bd3dc83ef9f57e439ea2977a47f5bea",
+    "url": "./static/media/Maiden's Passing Youth.5bd3dc83.png"
   },
   {
     "revision": "1a9bcacefb2919a631ab743cca816af0",
@@ -348,6 +460,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Royal Bow.a0d0464b.png"
   },
   {
+    "revision": "c0258a8848c7cf9c9fc8d9643119937a",
+    "url": "./static/media/Royal Flora.c0258a88.png"
+  },
+  {
     "revision": "c9dabaa804c1c9e7bad8f84b4bd01f49",
     "url": "./static/media/Royal Greatsword.c9dabaa8.png"
   },
@@ -358,6 +474,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2f0605104204c8f1fc1d38e8d84e3066",
     "url": "./static/media/Royal Longsword.2f060510.png"
+  },
+  {
+    "revision": "baf006f9cbb5752f989b56b9b63a1793",
+    "url": "./static/media/Royal Masque.baf006f9.png"
+  },
+  {
+    "revision": "3d33e02689f5d47000c28eee320c5708",
+    "url": "./static/media/Royal Plume.3d33e026.png"
+  },
+  {
+    "revision": "42248d9bdc93ad7f993be24903a8e58d",
+    "url": "./static/media/Royal Pocket Watch.42248d9b.png"
+  },
+  {
+    "revision": "043f0a2f09234b68b7e185abeb6e3c87",
+    "url": "./static/media/Royal Silver Urn.043f0a2f.png"
   },
   {
     "revision": "6ee6e7a087684bb38a29da6dc49f4e7c",
@@ -378,6 +510,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3d2d83df4dd91f3ebcbef885824177e8",
     "url": "./static/media/Sacrificial Sword.3d2d83df.png"
+  },
+  {
+    "revision": "4ddf59b2b18237c48694e9c6d1f11ec9",
+    "url": "./static/media/Scholar's Bookmark.4ddf59b2.png"
+  },
+  {
+    "revision": "fc43458c468214951518fff615ece297",
+    "url": "./static/media/Scholar's Clock.fc43458c.png"
+  },
+  {
+    "revision": "c2ccfa78bdb0ee5d349fd0dc5a78e9e1",
+    "url": "./static/media/Scholar's Ink Cup.c2ccfa78.png"
+  },
+  {
+    "revision": "19d7ac83e85f6491fcf550b64200d080",
+    "url": "./static/media/Scholar's Lens.19d7ac83.png"
+  },
+  {
+    "revision": "90830628d0de82660a0580ad8df51d35",
+    "url": "./static/media/Scholar's Quill Pen.90830628.png"
   },
   {
     "revision": "61773ceecf48af39a1a036d53a72eb94",
@@ -476,8 +628,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Thrilling Tales of Dragon Slayers.eb5835c1.png"
   },
   {
+    "revision": "5b1faa8f6d4f549db9b1e8446fec69bb",
+    "url": "./static/media/Thunderbird's Mercy.5b1faa8f.png"
+  },
+  {
+    "revision": "64670e478b705b29ad39ccc129be4f16",
+    "url": "./static/media/Thundershoother's Goblet.64670e47.png"
+  },
+  {
+    "revision": "64670e478b705b29ad39ccc129be4f16",
+    "url": "./static/media/Thundershoother's Heart.64670e47.png"
+  },
+  {
+    "revision": "64670e478b705b29ad39ccc129be4f16",
+    "url": "./static/media/Thundershoother's Plume.64670e47.png"
+  },
+  {
+    "revision": "94f80f5f2d6ef30e1cd626d53f6576e1",
+    "url": "./static/media/Tiny Miracle's Flower.94f80f5f.png"
+  },
+  {
+    "revision": "21120ffa09529bb4393baadb397ea151",
+    "url": "./static/media/Traveler (Anemo).21120ffa.png"
+  },
+  {
+    "revision": "21120ffa09529bb4393baadb397ea151",
+    "url": "./static/media/Traveler (Geo).21120ffa.png"
+  },
+  {
     "revision": "6fc091fe4871ce5222094797798142c4",
     "url": "./static/media/Traveler's Handy Sword.6fc091fe.png"
+  },
+  {
+    "revision": "2768220ecdb26f2547eb8b9f833e6804",
+    "url": "./static/media/Traveling Doctor's Silver Lotus.2768220e.png"
   },
   {
     "revision": "1a3cea11dbe83b39deffcd8cf76d76c9",
@@ -486,6 +670,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "71f72b0d42bbcfb076184c9de97cbaab",
     "url": "./static/media/Venti.71f72b0d.png"
+  },
+  {
+    "revision": "58d573e2453ea178c0d85cc626a136dd",
+    "url": "./static/media/Viridescent Arrow Feather.58d573e2.png"
+  },
+  {
+    "revision": "36fa5ecba875561bc7eba2745be49dc4",
+    "url": "./static/media/Viridescent Venerer's Determination.36fa5ecb.png"
+  },
+  {
+    "revision": "43c93f6271020fd881886d25ac8ab143",
+    "url": "./static/media/Viridescent Venerer's Diadem.43c93f62.png"
+  },
+  {
+    "revision": "a9ae26c8fd72cf67ebf98bd68fa1bb21",
+    "url": "./static/media/Viridescent Venerer's Vessel.a9ae26c8.png"
+  },
+  {
+    "revision": "36fa5ecba875561bc7eba2745be49dc4",
+    "url": "./static/media/Viridescent Venerer.36fa5ecb.png"
+  },
+  {
+    "revision": "9391645cffa5385d84d551c186ec0ee7",
+    "url": "./static/media/Wanderer's Troupe.9391645c.png"
   },
   {
     "revision": "0ae4b6528a62a262687b44e11386de68",
@@ -510,6 +718,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e839b0046ffefc6c4abd757ed7d176b2",
     "url": "./static/media/Wine and Song.e839b004.png"
+  },
+  {
+    "revision": "b0a5a8fffd76be74b9f99db258badd9e",
+    "url": "./static/media/Witch's End Time.b0a5a8ff.png"
+  },
+  {
+    "revision": "586922838bd3de941054e7fdcd518bb9",
+    "url": "./static/media/Witch's Ever-Burning Plume.58692283.png"
+  },
+  {
+    "revision": "2fa5860b4d08dd65720cca8d71ad6700",
+    "url": "./static/media/Witch's Flower of Blaze.2fa5860b.png"
+  },
+  {
+    "revision": "1d68b9b7cdfcc7db6d7f14b0bab94b4d",
+    "url": "./static/media/Witch's Heart Flames.1d68b9b7.png"
+  },
+  {
+    "revision": "9d2c58f199f336ecc0de566dff11d51b",
+    "url": "./static/media/Witch's Scorching Hat.9d2c58f1.png"
   },
   {
     "revision": "49845cae8271b8bf8691d9c8f8840208",

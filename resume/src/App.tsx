@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import { Profile, Experience, Education, Skills } from './components';
+import { Profile, Experience, Education, Skills, ToyProject } from './components';
 
 const Container = styled.div({
   width: '52%',
@@ -21,8 +21,8 @@ function App() {
       <Skills />
       <Border />
       <Experience />
-      {/* <Border />
-      <SideProject /> */}
+      <Border />
+      <ToyProject />
       <Border />
       <Education />
     </Container>

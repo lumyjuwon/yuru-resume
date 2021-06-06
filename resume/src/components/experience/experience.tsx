@@ -1,19 +1,11 @@
 import styled from 'styled-components';
 import { CompanyInfo } from './companyInfo';
-import { CompanyProject } from './companyProject';
-
-export interface Project {
-  name: string;
-  description: string;
-  whatIdo: string[];
-  skills: string[];
-  urls?: string[];
-}
+import { ProjectProps, Project } from '../common/project';
 
 interface CompanyExperience {
   [companyName: string]: {
     startDate: Date;
-    projects: Project[];
+    projects: ProjectProps[];
     endDate?: Date;
   };
 }
@@ -26,6 +18,7 @@ const companyExperience: CompanyExperience = {
         name: '사내 Slack Server',
         description: 'Slack Interaction 핸들링 Server',
         whatIdo: ['Slack Interaction을 Handle하는 Server 구축', '반복적인 사내 업무를 Slack으로 업무 자동화 구현'],
+        whatIdoTitle: '담당 업무',
         skills: ['Nodejs', 'Typescript', 'Mongoose', 'Slack API']
       },
       {
@@ -37,6 +30,7 @@ const companyExperience: CompanyExperience = {
           'Node.js와 게임간의 TCP Socket 통신 구현',
           'Jenkins CI 구축'
         ],
+        whatIdoTitle: '담당 업무',
         skills: ['Nodejs', 'Typescript', 'Jest', 'Appium', 'TCP Socket', 'Flatbuffer']
       },
       {
@@ -47,6 +41,7 @@ const companyExperience: CompanyExperience = {
           'Android, iOS 정책 업데이트에 따른 라이브러리 마이그레이션 및 업데이트',
           'Android, iOS CI/CD 운영 및 개발'
         ],
+        whatIdoTitle: '담당 업무',
         skills: ['Android', 'iOS', 'Java', 'Object-c', 'C++', 'Python', 'CI/CD'],
         urls: [
           'https://play.google.com/store/apps/details?id=com.pearlabyss.blackdesertm&hl=ko&gl=US',
@@ -57,6 +52,7 @@ const companyExperience: CompanyExperience = {
         name: '검은사막+',
         description: '검은사막 온라인 및 검은사막 콘솔 게임 유틸리티 애플리케이션',
         whatIdo: ['검은사막+ 설계 담당', 'Front-End 개발', 'Push Notification 개발', '로그인 개발'],
+        whatIdoTitle: '담당 업무',
         skills: [
           'React-Native',
           'Typescript',
@@ -82,6 +78,7 @@ const companyExperience: CompanyExperience = {
       {
         name: 'Comment Classifier',
         description: '댓글 데이터를 긍정 또는 부정으로 판별하는 프로젝트',
+        whatIdoTitle: '담당 업무',
         whatIdo: [
           '모델 효율 검증을 위한 대용량의 학습 데이터 수집',
           'Bi-LSTM 모델을 이용하여 수집한 학습 데이터를 이용해 학습',
@@ -110,8 +107,8 @@ export function Experience() {
               startDate={companyExperience[companyName].startDate}
               endDate={companyExperience[companyName].endDate}
             >
-              {companyExperience[companyName].projects.map((project: Project) => {
-                return <CompanyProject key={project.name} project={project} />;
+              {companyExperience[companyName].projects.map((project: ProjectProps) => {
+                return <Project key={project.name} project={project} />;
               })}
             </CompanyInfo>
           </>

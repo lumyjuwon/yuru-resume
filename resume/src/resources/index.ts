@@ -3,5 +3,6 @@ export const Resources = {
   github_512: require('./github_512.png').default,
   linkedin_512: require('./linkedin_512.png').default,
   playstore_512: require('./playstore_512.png').default,
-  appstore_512: require('./appstore_512.png').default
+  appstore_512: require('./appstore_512.png').default,
+  url: require('./url.png').default
 };

@@ -43,7 +43,7 @@ const Container = styled.div({
 });
 
 const About = styled.span({
-  fontSize: '14px'
+  fontSize: '16px'
 });
 
 export function Profile() {
@@ -69,12 +69,10 @@ export function Profile() {
         info={'https://www.linkedin.com/in/juwon-seong-a39b64170/'}
       />
       <h2>About</h2>
-      <About>제품, 자동화, 사내 툴 개발 등의 업무를 맡은 경험이 있습니다.</About>
       <About>
-        스스로 회사 밖(유저)과 회사 안(개발자)에서 필요한 것들을 찾아 개발하며 사용자가 제품을 이용하는 모습을 볼 때 더
-        완벽하게 만들려는 자극을 받습니다.
+        제품, 자동화, 사내 툴 개발 등의 업무를 맡고 있으며 스스로 필요한 것을 찾아 개발하며 사용자가 제품을 이용하는
+        모습을 볼 때 더 완벽하게 만들려는 자극을 받습니다.
       </About>
-      <About>개발 철학으로서 한 번 쓰고 버려지는 제품이 되지 않도록 UX를 가장 중요시 여기고 있습니다.</About>
     </Container>
   );
 }

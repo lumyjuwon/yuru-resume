@@ -23,7 +23,7 @@ const Container = styled.div({});
 export function SideProject() {
   return (
     <Container>
-      <h1>SideProject</h1>
+      <h2>SideProject</h2>
       {projects.map((project: Project) => {
         return <div key={project.name}>{project.name}</div>;
       })}

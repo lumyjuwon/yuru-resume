@@ -100,7 +100,7 @@ const Container = styled.div({});
 export function Experience() {
   return (
     <Container>
-      <h1>Experience</h1>
+      <h2>Experience</h2>
       {companyExperienceKeys.map((companyName: string) => {
         return (
           <>

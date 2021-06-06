@@ -16,7 +16,7 @@ const UniversityDate = styled.span({
 export function Education() {
   return (
     <Container>
-      <h1>Education</h1>
+      <h2>Education</h2>
       <UniversityName>국민대학교 소프트웨어학부</UniversityName>
       <UniversityDate>(2018 ~)</UniversityDate>
     </Container>

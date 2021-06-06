@@ -1,10 +1,9 @@
 import './App.css';
 import styled from 'styled-components';
-import { Profile, Experience, Education, SideProject, Skills } from './components';
-import { Resources } from './resources';
+import { Profile, Experience, Education, Skills } from './components';
 
 const Container = styled.div({
-  width: '50%',
+  width: '52%',
   display: 'flex',
   flexDirection: 'column'
 });

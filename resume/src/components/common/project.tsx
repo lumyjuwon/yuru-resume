@@ -7,6 +7,7 @@ export interface ProjectProps {
   whatIdo: string[];
   whatIdoTitle: string;
   skills: string[];
+  period: string;
   urls?: string[];
 }
 
@@ -32,7 +33,7 @@ const ProjectTitle = styled.span({
   fontWeight: 'bold'
 });
 
-function ProjectInfo(props: { title: string; description: string; urls?: string[] }) {
+function ProjectInfo(props: { title: string; description: string; period: string; urls?: string[] }) {
   function UrlIcon(urlIconProps: { url: string }) {
     let icon;
     if (urlIconProps.url.includes('google')) {
@@ -56,6 +57,7 @@ function ProjectInfo(props: { title: string; description: string; urls?: string[
     <>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <ProjectTitle>{props.title}</ProjectTitle>
+        <span style={{ marginLeft: '4px' }}>({props.period})</span>
         {props.urls &&
           props.urls.map((url: string) => {
             return <UrlIcon key={url} url={url} />;
@@ -106,7 +108,7 @@ export function Project(props: Props) {
 
   return (
     <Container>
-      <ProjectInfo title={project.name} description={project.description} urls={project.urls} />
+      <ProjectInfo title={project.name} description={project.description} period={project.period} urls={project.urls} />
       <DoDescription descriptions={project.whatIdo} descriptionTitle={project.whatIdoTitle} />
       {props.project.skills.map((skill: string) => {
         return <SkillShield key={skill}>{skill}</SkillShield>;

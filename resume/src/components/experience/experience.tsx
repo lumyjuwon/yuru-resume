@@ -17,9 +17,13 @@ const companyExperience: CompanyExperience = {
       {
         name: '사내 Slack Server',
         description: 'Slack Interaction 핸들링 Server',
-        whatIdo: ['Slack Interaction을 Handle하는 Server 구축', '반복적인 사내 업무를 Slack으로 업무 자동화 구현'],
+        whatIdo: [
+          'Slack Interaction을 Handle하는 Server 구축',
+          '체크리스트 폼 작성, 젠킨스 빌드와 같은 행동을 Slack 내에서 진행할 수 있도록 개발'
+        ],
         whatIdoTitle: '담당 업무',
-        skills: ['Nodejs', 'Typescript', 'Mongoose', 'Slack API']
+        period: '2021.05 ~ 현재',
+        skills: ['Node.js', 'Typescript', 'Mongoose', 'Slack API']
       },
       {
         name: 'Game Automation',
@@ -27,11 +31,12 @@ const companyExperience: CompanyExperience = {
         whatIdo: [
           'Jest 기반의 게임 자동화 Framework 설계 및 개발',
           'Appium을 이용해 Android, iOS, Windows 플랫폼 제어 개발',
-          'Node.js와 게임간의 TCP Socket 통신 구현',
-          'Jenkins CI 구축'
+          '사내 Android, iOS, Windows 플랫폼에서 운영되는 모든 게임 자동화 가능하도록 환경 셋팅',
+          '검은사막 모바일 Game Automation 도입 및 지속적인 프로파일링, 컨텐츠 검증 Jenkins CI 구축'
         ],
         whatIdoTitle: '담당 업무',
-        skills: ['Nodejs', 'Typescript', 'Jest', 'Appium', 'TCP Socket', 'Flatbuffer']
+        period: '2020.10 ~ 2021.04',
+        skills: ['Node.js', 'Typescript', 'Jest', 'Appium', 'TCP Socket', 'Flatbuffer']
       },
       {
         name: '검은사막 모바일',
@@ -43,6 +48,7 @@ const companyExperience: CompanyExperience = {
         ],
         whatIdoTitle: '담당 업무',
         skills: ['Android', 'iOS', 'Java', 'Object-c', 'C++', 'Python', 'CI/CD'],
+        period: '2020.01 ~ 현재',
         urls: [
           'https://play.google.com/store/apps/details?id=com.pearlabyss.blackdesertm&hl=ko&gl=US',
           'https://apps.apple.com/kr/app/%EA%B2%80%EC%9D%80%EC%82%AC%EB%A7%89-%EB%AA%A8%EB%B0%94%EC%9D%BC/id1323002999'
@@ -51,7 +57,7 @@ const companyExperience: CompanyExperience = {
       {
         name: '검은사막+',
         description: '검은사막 온라인 및 검은사막 콘솔 게임 유틸리티 애플리케이션',
-        whatIdo: ['검은사막+ 설계 담당', 'Front-End 개발', 'Push Notification 개발', '로그인 개발'],
+        whatIdo: ['검은사막+ 앱 구조 설계', '하이브리드 앱 UI 개발', 'Push Notification 개발', '로그인 개발'],
         whatIdoTitle: '담당 업무',
         skills: [
           'React-Native',
@@ -64,6 +70,7 @@ const companyExperience: CompanyExperience = {
           'Redux-Saga',
           'Redux-Persist'
         ],
+        period: '2019.08 ~ 현재',
         urls: [
           'https://play.google.com/store/apps/details?id=com.pearlabyss.pearlapp&hl=ko&gl=US',
           'https://apps.apple.com/kr/app/%EA%B2%80%EC%9D%80%EC%82%AC%EB%A7%89/id1460559702'
@@ -84,6 +91,7 @@ const companyExperience: CompanyExperience = {
           'Bi-LSTM 모델을 이용하여 수집한 학습 데이터를 이용해 학습',
           '사내 데이터를 학습한 모델에 입력하여 정확도 검증'
         ],
+        period: '2018.07 ~ 2018.08',
         skills: ['Python', 'Tensorflow', 'Scraping']
       }
     ]

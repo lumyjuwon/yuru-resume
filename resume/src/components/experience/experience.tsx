@@ -16,10 +16,12 @@ const companyExperience: CompanyExperience = {
     projects: [
       {
         name: '사내 Slack Server',
-        description: 'Slack Interaction 핸들링 Server',
+        description: `Slack Interaction Handling Server: Slack에서 체크 기능의 양식 폼을 전송할 수 없어 포스트를 만들어 지속적으로 Send & Edit 하고 계신 사우 분을 보고 
+        Slack 내에서도 반복적인 업무를 줄이기 위해 유저의 상호작용을 핸들링 할 수 있도록 개발한 사내 Slack Server입니다.
+        처음에는 포스트를 대체할 수 있는 도구를 만들기 위해 시작했으나 활용도가 더 많아져 Jenkins 빌드 시작 등의 여러 작업들을 Slack에서 처리할 수 있도록 도구들을 제공하고 있습니다.`,
         whatIdo: [
           'Slack Interaction을 Handle하는 Server 구축',
-          '체크리스트 폼 작성, 젠킨스 빌드와 같은 행동을 Slack 내에서 진행할 수 있도록 개발'
+          '체크리스트 폼 작성, 젠킨스 빌드와 같은 행동을 Slack 내에서 진행할 수 있도록 도구 제공'
         ],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
@@ -27,15 +29,16 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: 'Game Automation',
-        description: 'Android, iOS, Windows 게임 자동화 Framework ',
+        description:
+          'Android, iOS, Windows 게임 자동화 Framework: 검은사막+ 애플리케이션을 자동화하기 위해 개발을 시작했으나 검은사막+ 이외에 검은사막 모바일에서 반복적인 작업들이 많이 있다는 것을 파악하고 반복적인 업무를 줄이기 위해 개발한 프레임워크입니다.',
         whatIdo: [
           'Jest 기반의 게임 자동화 Framework 설계 및 개발',
           'Appium을 이용해 Android, iOS, Windows 플랫폼 제어 개발',
-          '사내 Android, iOS, Windows 플랫폼에서 운영되는 모든 게임 자동화 가능하도록 환경 셋팅',
-          '검은사막 모바일 Game Automation 도입 및 지속적인 프로파일링, 컨텐츠 검증 Jenkins CI 구축'
+          '사내 Android, iOS, Windows 플랫폼에서 운영되는 모든 게임을 자동화 가능하도록 환경 구축(Work Bench)',
+          '검은사막 모바일 Game Automation 라이브 도입 및 프로파일링, 컨텐츠 검증 Jenkins CI 구축'
         ],
         whatIdoTitle: '담당 업무',
-        period: '2020.10 ~ 2021.04',
+        period: '2020.10 ~ 현재',
         skills: ['Node.js', 'Typescript', 'Jest', 'Appium', 'TCP Socket', 'Flatbuffer']
       },
       {
@@ -56,8 +59,14 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: '검은사막+',
-        description: '검은사막 온라인 및 검은사막 콘솔 게임 유틸리티 애플리케이션',
-        whatIdo: ['검은사막+ 앱 구조 설계', '하이브리드 앱 UI 개발', 'Push Notification 개발', '로그인 개발'],
+        description:
+          '검은사막 온라인 및 검은사막 콘솔 유틸리티 애플리케이션: 입사 후 담당하게 된 첫 프로젝트입니다. 검은사막+는 유저분들에게 검은사막 온라인 및 콘솔을 더 효율적으로 이용하실 수 있도록 푸시 알림, 채팅 등의 기능을 제공하고 있습니다.',
+        whatIdo: [
+          '검은사막+ 앱 구조 설계',
+          '하이브리드 앱 UI 개발',
+          'Push Notification 개발',
+          'Client Oauth 2.0 로그인 개발'
+        ],
         whatIdoTitle: '담당 업무',
         skills: [
           'React-Native',
@@ -84,7 +93,8 @@ const companyExperience: CompanyExperience = {
     projects: [
       {
         name: 'Comment Classifier',
-        description: '댓글 데이터를 긍정 또는 부정으로 판별하는 프로젝트',
+        description:
+          '댓글 데이터를 긍정, 부정으로 판별하는 프로젝트: 문장을 Input 하면 해당 문장이 부정적인 성향이 강한지 긍정적인 성향이 강한지 판별하는 모델 학습 및 검증을 진행했습니다.',
         whatIdoTitle: '담당 업무',
         whatIdo: [
           '모델 효율 검증을 위한 대용량의 학습 데이터 수집',

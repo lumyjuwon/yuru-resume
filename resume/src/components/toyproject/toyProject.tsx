@@ -4,7 +4,8 @@ import { Project, ProjectProps } from '../common/project';
 const projects: ProjectProps[] = [
   {
     name: 'Elaina-Blog',
-    description: 'Document 템플릿 같은 블로그 플랫폼 프로젝트',
+    description:
+      'Document 템플릿 블로그 플랫폼 프로젝트: Document 형식같은 블로그 플랫폼을 운영하고 싶어 개발하기 시작한 프로젝트입니다.',
     whatIdo: ['Component 개발'],
     whatIdoTitle: '담당 작업',
     skills: [
@@ -22,7 +23,8 @@ const projects: ProjectProps[] = [
   },
   {
     name: 'Genshin-Simul',
-    description: '"원신" 게임 시뮬레이터 사이트',
+    description:
+      '"원신" 게임 시뮬레이터 사이트: "원신"을 플레이하는 유저분들에게 가챠, 파티 조합 등의 시뮬레이션을 할 수 있도록 개발한 웹사이트입니다. 이전에는 AWS LightSail 클라우드에서 운영하고 있었으나 이용자 감소로 인해 github.io 페이지로 옮기게 됐습니다.',
     whatIdo: ['Static SPA 배포 및 Front-Server 구축', 'Front-End 개발'],
     whatIdoTitle: '담당 작업',
     skills: ['Typescript', 'React', 'Styled-Component', 'Redux', 'Redux-Persist'],
@@ -31,7 +33,7 @@ const projects: ProjectProps[] = [
   },
   {
     name: 'KoreaNewsCrawler',
-    description: '네이버 뉴스 스크래핑 도구',
+    description: `네이버 뉴스 스크래핑 도구: Cizion에서 근무할 때 모델을 검증하기 위해 대용량의 데이터 수집이 필요하여 개발한 스크래핑입니다. 네이버 뉴스를 스크래핑한 이유는 카테고리가 명확하여 학습 데이터로 사용하기에 매우 적합하다고 판단했기 때문입니다.`,
     whatIdo: [
       '네이버 뉴스 DOM 구조 파악',
       'SSR인 네이버 뉴스 페이지 Request HTML 및 BeautifulSoup 라이브러리를 이용해 HTML에서 필요한 데이터 추출',

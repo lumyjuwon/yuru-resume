@@ -37,7 +37,7 @@ export function Skills(props: Props) {
       <SkillDescription title={'Language'} description={'Typescript'} />
       <SkillDescription title={'Front-End'} description={'React, Styled-Component, Redux'} />
       <SkillDescription title={'Back-End'} description={'Node.js'} />
-      <SkillDescription title={'Technologies'} description={'Jenkins, Appium'} />
+      <SkillDescription title={'Technologies'} description={'Jenkins, Appium, Android, iOS'} />
 
       <h2>Additional Skills</h2>
       <SkillDescription title={'Language'} description={'Python, Java, C#'} />

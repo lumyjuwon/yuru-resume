@@ -16,11 +16,8 @@ const companyExperience: CompanyExperience = {
     projects: [
       {
         name: '사내 Slack Server',
-        description: `Slack API 핸들링 서버`,
-        whatIdo: [
-          'Slack Interaction을 Handle하는 Server 구축',
-          '외부망에서 Slack을 통해 Jenkins 빌드와 같은 개발망 내에서만 할 수 있는 특정 작업을 처리할 수 있도록 기능 제공'
-        ],
+        description: `유저와 Slack간의 상호작용을 처리하는 서버`,
+        whatIdo: ['Slack을 통해 Jenkins Build 등을 처리하는 기능 개발', 'CI/CD 결과에 대한 알림 처리'],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
         skills: ['Node.js', 'Typescript', 'Mongoose', 'Slack API']
@@ -30,24 +27,19 @@ const companyExperience: CompanyExperience = {
         description: 'Android, iOS, Windows 게임 QA자동화 프레임워크',
         whatIdo: [
           'Jest 기반의 게임 자동화 Framework 설계 및 개발',
-          'Appium을 이용해 Android, iOS, Windows 플랫폼 제어 개발',
-          '사내 Android, iOS, Windows 플랫폼에서 운영되는 모든 게임을 자동화 가능한 프레임워크 설계',
-          '검은사막 모바일 Game Automation 도입 및 프로파일링, 컨텐츠 검증 Jenkins CI 구축'
+          'Appium을 이용한 Android, iOS, Windows 플랫폼 제어 개발',
+          '검은사막 모바일 프로파일링, 컨텐츠 검증 등의 CI 구축'
         ],
         whatIdoTitle: '담당 업무',
         period: '2020.10 ~ 현재',
-        skills: ['Node.js', 'Typescript', 'Jest', 'Appium', 'TCP Socket', 'Flatbuffer']
+        skills: ['Node.js', 'Typescript', 'Jest', 'Appium', 'TCP Socket', 'Flatbuffer', 'Adb', 'Idb', 'WinAppDriver']
       },
       {
         name: '검은사막 모바일',
         description: '검은사막 모바일 게임',
-        whatIdo: [
-          'Android, iOS 소셜 로그인 유지보수',
-          'Android, iOS SDK 관리 및 업데이트, 마이그레이션 작업',
-          'Android, iOS CI/CD 운영 및 개발'
-        ],
+        whatIdo: ['Android, iOS SDK 유지보수', 'Android, iOS 소셜 로그인 유지보수', 'Android, iOS CI/CD 운영 및 개발'],
         whatIdoTitle: '담당 업무',
-        skills: ['Android', 'iOS', 'Java', 'Object-c', 'C++', 'Python', 'CI/CD'],
+        skills: ['Android', 'iOS', 'Firebase', 'Java', 'Object-c', 'C++', 'Python'],
         period: '2020.01 ~ 현재',
         urls: [
           'https://play.google.com/store/apps/details?id=com.pearlabyss.blackdesertm&hl=ko&gl=US',
@@ -56,10 +48,10 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: '검은사막+',
-        description: '검은사막 콘솔 및 온라인 유틸리티 애플리케이션',
+        description: '검은사막 온라인 및 콘솔 유틸리티 애플리케이션',
         whatIdo: ['검은사막+ 앱 구조 설계', '하이브리드 앱 UI/UX 개발', 'Push Notification 개발', 'Client 로그인 개발'],
         whatIdoTitle: '담당 업무',
-        skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'React', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist'],
+        skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist'],
         period: '2019.08 ~ 현재',
         urls: [
           'https://play.google.com/store/apps/details?id=com.pearlabyss.pearlapp&hl=ko&gl=US',
@@ -82,7 +74,7 @@ const companyExperience: CompanyExperience = {
           '학습된 모델 정확도 검증'
         ],
         period: '2018.07 ~ 2018.08',
-        skills: ['Python', 'Tensorflow', 'Scraping']
+        skills: ['Python', 'Tensorflow']
       }
     ]
   }
@@ -95,7 +87,7 @@ const Container = styled.div({});
 export function Experience() {
   return (
     <Container>
-      <h2>Experience</h2>
+      <h2>Work Experience</h2>
       {companyExperienceKeys.map((companyName: string) => {
         return (
           <>

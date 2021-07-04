@@ -49,19 +49,9 @@ const Context = styled.span({
 export function Profile() {
   return (
     <Container>
-      <h2>성주원</h2>
-      <IconInfo
-        src={Resources.gmail_512}
-        alt={'GmailIcon'}
-        href={'mailto:lumyjuwon@gmail.com'}
-        info={'lumyjuwon@gmail.com'}
-      />
-      <IconInfo
-        src={Resources.github_512}
-        alt={'GithubIcon'}
-        href={'https://github.com/lumyjuwon'}
-        info={'https://github.com/lumyjuwon'}
-      />
+      <h2>성주원 (SeongJuWon)</h2>
+      <IconInfo src={Resources.gmail_512} alt={'GmailIcon'} href={'mailto:lumyjuwon@gmail.com'} info={'lumyjuwon@gmail.com'} />
+      <IconInfo src={Resources.github_512} alt={'GithubIcon'} href={'https://github.com/lumyjuwon'} info={'https://github.com/lumyjuwon'} />
       <IconInfo
         src={Resources.linkedin_512}
         alt={'LinkedInIcon'}
@@ -70,10 +60,12 @@ export function Profile() {
       />
       <h2>About</h2>
       <Context>
-        제품, 자동화, 사내 툴 개발 등의 업무를 맡고 있으며 스스로 필요한 것들을 찾아 개발하며 사용자가 제품을 이용하는
-        모습을 볼 때 더 완벽하게 만들려는 자극을 받으며, 기획에 맞게 개발만 하는 것이 아닌 기획의 의도가 적합한지를
-        따져가며 제품 개발에 참여하는 것을 좋아합니다. 또한 반복적인 업무를 자동화하여 효율적인 업무 프로세스 개발에
-        경험이 많습니다.
+        {'제품 및 툴 개발에 흥미를 가지고 있으며 "개발 -> 검증 -> 배포 -> 유지보수"의 프로세스 경험을 많이 가지고 있는 개발자입니다.'}
+      </Context>
+      <Context>
+        {
+          '개발한 제품으로 사람들을 행복하게 만들며 툴 개발을 통해 제품의 안정성과 개발 생산성을 높여 유저분들에게 퀄리티 높은 제품을 제공하려고 노력하고 있습니다.'
+        }
       </Context>
     </Container>
   );

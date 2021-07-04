@@ -42,7 +42,7 @@ export function Skills(props: Props) {
       <h2>Additional Skills</h2>
       <SkillDescription title={'Language'} description={'Python, Java, C#'} />
       <SkillDescription title={'Front-End'} description={'Nextjs, Apollo-Client'} />
-      <SkillDescription title={'Back-End'} description={'Apollo-Server, Express, Mongoose'} />
+      <SkillDescription title={'Back-End'} description={'Express, Mongoose, Apollo-Server'} />
       <SkillDescription title={'Technologies'} description={'MongoDB, GraphQL'} />
     </Container>
   );

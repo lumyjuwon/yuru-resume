@@ -10,7 +10,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install Dependencies
+      - name: Install Resume Dependencies
         working-directory: resume
         run: npm install
 
@@ -31,7 +31,7 @@ jobs:
         working-directory: resume
         run: npm run build
 
-      - name: Install Dependencies
+      - name: Install Utils Dependencies
         working-directory: utils
         run: npm install
 

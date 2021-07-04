@@ -21,10 +21,39 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Install Client Dependencies
+      - name: Install Dependencies
         working-directory: resume
         run: npm install
 
       - name: Build Client
         working-directory: resume
         run: npm run build
+
+  release:
+    needs: [build]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+
+      - name: Use Node.js '14.x'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - name: Install Dependencies
+        working-directory: utils
+        run: npm install
+
+      - name: Release Resume
+        working-directory: utils
+        run: npm run release
+
+      - name: Commit
+        run: |
+          git config --global user.name 'lumyjuwon'
+          git config --global user.email 'lumyjuwon@gmail.com'
+          git commit -am "Build Resume"
+          git push

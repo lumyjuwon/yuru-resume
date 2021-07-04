@@ -49,7 +49,7 @@ jobs:
 
       - name: Release Resume
         working-directory: utils
-        run: npm run release
+        run: npm run release-resume
 
       - name: Commit
         run: |

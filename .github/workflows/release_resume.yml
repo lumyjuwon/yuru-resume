@@ -31,20 +31,6 @@ jobs:
         working-directory: resume
         run: npm run build
 
-  release:
-    needs: [build]
-    runs-on: ubuntu-latest
-
-    steps:
-      # - uses: actions/checkout@v2
-      #   with:
-      #     token: ${{ secrets.GIT_TOKEN }}
-
-      # - name: Use Node.js '14.x'
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: '14.x'
-
       - name: Install Dependencies
         working-directory: utils
         run: npm install

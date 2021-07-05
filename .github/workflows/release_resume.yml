@@ -43,5 +43,6 @@ jobs:
         run: |
           git config --global user.name 'lumyjuwon'
           git config --global user.email 'lumyjuwon@gmail.com'
-          git commit -a "Release Resume"
+          git add -A
+          git commit -m "Release Resume"
           git push

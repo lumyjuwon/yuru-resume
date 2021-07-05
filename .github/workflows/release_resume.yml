@@ -39,9 +39,9 @@ jobs:
         working-directory: utils
         run: npm run release-resume
 
-      - name: Commit
+      - name: Push
         run: |
           git config --global user.name 'lumyjuwon'
           git config --global user.email 'lumyjuwon@gmail.com'
-          git commit -am "Release Resume"
+          git commit -a "Release Resume"
           git push

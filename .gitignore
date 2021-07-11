@@ -7,7 +7,7 @@
 /resume/build
 
 # utils
-utils/node_modules
+utils/node_moduless
 
 # misc
 .DS_Store

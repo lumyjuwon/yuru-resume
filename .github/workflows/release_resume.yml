@@ -35,9 +35,9 @@ jobs:
         working-directory: utils
         run: npm install
 
-      - name: Release Resume
+      - name: Replace Resume
         working-directory: utils
-        run: npm run release-resume
+        run: npm run replace-resume
 
       - name: Push
         run: |

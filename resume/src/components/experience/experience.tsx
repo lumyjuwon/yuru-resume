@@ -17,7 +17,7 @@ const companyExperience: CompanyExperience = {
       {
         name: '사내 Slack Server',
         description: `유저와 Slack간의 상호작용을 처리하는 서버`,
-        whatIdo: ['Slack을 통해 Jenkins Build 등을 처리하는 기능 개발', 'CI/CD 결과에 대한 알림 처리'],
+        whatIdo: ['Slack을 통해 Jenkins Build 등을 처리하는 기능 개발', 'CI/CD 결과에 대한 세부적인 알림 처리'],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
         skills: ['Node.js', 'Typescript', 'Mongoose', 'Slack API']

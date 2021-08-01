@@ -17,17 +17,15 @@ const companyExperience: CompanyExperience = {
       {
         name: '사내 Slack Server',
         description: `유저와 Slack간의 상호작용을 처리하는 서버입니다.
-        Slack API를 이용해 젠킨스 빌드, 에러 로그 열람 등의 외부망에서 접근하기 어려운 것들을 Slack을 통해 처리할 수 있게 만들어 Slack만으로도 에러 확인 및 재빌드 등을 가능하게 만들어 외부망에서도 개발과 관련된 업무 등을 진행할 수 있도록 하였습니다.`,
-        whatIdo: ['Slack을 통해 Jenkins Build 등을 처리하는 기능 개발', 'CI/CD 결과에 대한 세부적인 알림 처리'],
+        Slack을 통해 젠킨스 빌드, 에러 로그 열람 등의 기능을 제공하고 있으며 Slack을 통해 다양한 기능들을 사용할 수 있도록 개발하고 있습니다.`,
+        whatIdo: ['Jenkins 빌드, 에러 로그 열람 기능 개발'],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
         skills: ['Node.js', 'Typescript', 'Mongoose', 'Slack API']
       },
       {
         name: 'Game Automation',
-        description: `Android, iOS, Windows 게임 자동화 프레임워크입니다.
-        게임 자동화 프레임워크를 개발하게 된 이유는 컨텐츠 검증이나 프로파일링 등의 반복적인 업무들이 대부분 수동으로 이루어지고 있다는 것을 보고 자동화를 하게 된다면 엄청난 시너지를 보여줄 수 있을 것 같아 개발하게 됐습니다.
-        개발이 완료된 이후에는 사내에 반복적이었던 모든 업무들이 자동화 프레임워크를 통해 이루어지고 있고 이는 업무 생산성 증진에 큰 영향을 주었습니다.`,
+        description: `Android, iOS, Windows 게임 자동화 프레임워크입니다. Platform 및 Game을 제어할 수 있으며 Game Automation을 이용해 자동화 스크립트를 작성하여 반복적인 업무를 자동화할 수 있도록 기능을 제공하고 있습니다.`,
         whatIdo: [
           'Jest 기반의 게임 자동화 Framework 설계 및 개발',
           'Appium을 이용한 Android, iOS, Windows 플랫폼 제어 개발',
@@ -39,7 +37,7 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: '검은사막 모바일',
-        description: `검은사막 모바일에서 Android, iOS의 Social Login 및 Firebase 등과 같은 SDK를 관리 및 스토어 정책에 따른 앱 업데이트의 전반적인 것을 담당하여 유저분들에게 안정적인 서비스를 제공하고 있습니다.`,
+        description: `검은사막 모바일 소셜로그인, SDK 관리, CI/CD 등과 같은 Android, iOS 플랫폼 업무를 담당하고 있습니다.`,
         whatIdo: ['Android, iOS SDK 유지보수', 'Android, iOS 소셜 로그인 유지보수', 'Android, iOS CI/CD 운영 및 개발'],
         whatIdoTitle: '담당 업무',
         skills: ['Android', 'iOS', 'Firebase', 'Java', 'Object-c', 'C++', 'Python'],
@@ -54,7 +52,7 @@ const companyExperience: CompanyExperience = {
         description: `검은사막 온라인 및 콘솔 플레이에 유틸리티 기능을 제공해주는 애플리케이션입니다.
         해당 애플리케이션을 통해 유저분들이 어느 공간에서든 휴대폰만 있으면 길드원들과 채팅 및 아이템 거래 등을 할 수 있도록 유저분들에게 편리성을 제공하고 있습니다.`,
         whatIdoTitle: '담당 업무',
-        whatIdo: ['검은사막+ 앱 구조 설계', 'UI/UX 개발', 'Push Notification 개발', '일반 및 소셜 로그인 개발'],
+        whatIdo: ['검은사막+ 앱 구조 설계', 'UI/UX 개발', 'Push Notification 개발', '로그인 개발'],
         skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist'],
         period: '2019.08 ~ 현재',
         urls: [

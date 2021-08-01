@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.7a71eefc.chunk.css",
-    "main.js": "./static/js/main.da346a22.chunk.js",
-    "main.js.map": "./static/js/main.da346a22.chunk.js.map",
+    "main.css": "./static/css/main.7e1930c4.chunk.css",
+    "main.js": "./static/js/main.d3bfa58a.chunk.js",
+    "main.js.map": "./static/js/main.d3bfa58a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.db19c707.js",
     "runtime-main.js.map": "./static/js/runtime-main.db19c707.js.map",
     "static/js/2.342031ad.chunk.js": "./static/js/2.342031ad.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.f84c469a.chunk.js": "./static/js/3.f84c469a.chunk.js",
     "static/js/3.f84c469a.chunk.js.map": "./static/js/3.f84c469a.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.7a71eefc.chunk.css.map": "./static/css/main.7a71eefc.chunk.css.map",
+    "static/css/main.7e1930c4.chunk.css.map": "./static/css/main.7e1930c4.chunk.css.map",
     "static/js/2.342031ad.chunk.js.LICENSE.txt": "./static/js/2.342031ad.chunk.js.LICENSE.txt",
     "static/media/appstore_512.png": "./static/media/appstore_512.ac27f5d8.png",
     "static/media/playstore_512.png": "./static/media/playstore_512.d767501e.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.db19c707.js",
     "static/js/2.342031ad.chunk.js",
-    "static/css/main.7a71eefc.chunk.css",
-    "static/js/main.da346a22.chunk.js"
+    "static/css/main.7e1930c4.chunk.css",
+    "static/js/main.d3bfa58a.chunk.js"
   ]
 }

@@ -5,18 +5,18 @@ const Container = styled.div({
 });
 
 const UniversityName = styled.span({
-  fontSize: '18px'
+  fontSize: '16px'
 });
 
 const UniversityDate = styled.span({
-  fontSize: '16px',
+  fontSize: '14px',
   marginLeft: '8px'
 });
 
 export function Education() {
   return (
     <Container>
-      <h2>Education</h2>
+      <h3>Education</h3>
       <UniversityName>국민대학교 소프트웨어학부</UniversityName>
       <UniversityDate>(2018 ~)</UniversityDate>
     </Container>

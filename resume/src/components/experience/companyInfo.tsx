@@ -7,7 +7,7 @@ const Container = styled.div({
 });
 
 const CompanyTitle = styled.span({
-  fontSize: '22px',
+  fontSize: '18px',
   fontWeight: 'bold'
 });
 
@@ -17,7 +17,7 @@ const EmployedPeriod = styled.span({
 });
 
 const EmployedPeriodDate = styled.span({
-  fontSize: '18px',
+  fontSize: '16px',
   marginLeft: '8px'
 });
 

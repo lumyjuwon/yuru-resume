@@ -39,7 +39,7 @@ const Container = styled.div({});
 export function ToyProject() {
   return (
     <Container>
-      <h2>Toy Project</h2>
+      <h3>Toy Project</h3>
       {projects.map((project: ProjectProps) => {
         return <Project project={project} />;
       })}

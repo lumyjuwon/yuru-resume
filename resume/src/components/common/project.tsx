@@ -29,7 +29,7 @@ function SkillShield(props: { children: string }) {
 }
 
 const ProjectTitle = styled.span({
-  fontSize: '18px',
+  fontSize: '16px',
   fontWeight: 'bold'
 });
 

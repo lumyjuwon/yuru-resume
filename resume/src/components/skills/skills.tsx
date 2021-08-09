@@ -33,13 +33,13 @@ interface Props {}
 export function Skills(props: Props) {
   return (
     <Container>
-      <h2>Main Skills</h2>
+      <h3>Main Skills</h3>
       <SkillDescription title={'Language'} description={'Typescript'} />
       <SkillDescription title={'Front-End'} description={'React, Styled-Component'} />
       <SkillDescription title={'Back-End'} description={'Node.js'} />
       <SkillDescription title={'Technologies'} description={'React-Native, Android, iOS, Jenkins, Appium'} />
 
-      <h2>Additional Skills</h2>
+      <h3>Additional Skills</h3>
       <SkillDescription title={'Language'} description={'Python, Java, C#'} />
       <SkillDescription title={'Front-End'} description={'Nextjs, Apollo-Client'} />
       <SkillDescription title={'Back-End'} description={'Express, Mongoose, Apollo-Server'} />

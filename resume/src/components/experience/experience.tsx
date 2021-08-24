@@ -18,7 +18,7 @@ const companyExperience: CompanyExperience = {
         name: '사내 Slack Server',
         description: `유저와 Slack간의 상호작용을 처리하는 서버입니다.
         Slack을 통해 젠킨스 빌드, 에러 로그 열람 등의 기능을 제공하고 있으며 Slack을 통해 다양한 기능들을 사용할 수 있도록 개발하고 있습니다.`,
-        whatIdo: ['Jenkins 빌드, 에러 로그 열람 기능 개발'],
+        whatIdo: ['Slack을 통한 Jenkins 빌드, 에러 로그 열람 기능 개발'],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
         skills: ['Node.js', 'Typescript', 'Mongoose', 'Slack API']
@@ -52,8 +52,8 @@ const companyExperience: CompanyExperience = {
         description: `검은사막 온라인 및 콘솔 플레이에 유틸리티 기능을 제공해주는 애플리케이션입니다.
         해당 애플리케이션을 통해 유저분들이 어느 공간에서든 휴대폰만 있으면 길드원들과 채팅 및 아이템 거래 등을 할 수 있도록 유저분들에게 편리성을 제공하고 있습니다.`,
         whatIdoTitle: '담당 업무',
-        whatIdo: ['검은사막+ 앱 구조 설계', 'UI/UX 개발', 'Push Notification 개발', '로그인 개발'],
-        skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist'],
+        whatIdo: ['검은사막+ 앱 구조 설계', 'WebView 개발', 'React UI 개발', 'Push Notification 개발', '로그인 개발'],
+        skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist', 'WebView'],
         period: '2019.08 ~ 현재',
         urls: [
           'https://play.google.com/store/apps/details?id=com.pearlabyss.pearlapp&hl=ko&gl=US',

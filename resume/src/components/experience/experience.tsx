@@ -16,8 +16,7 @@ const companyExperience: CompanyExperience = {
     projects: [
       {
         name: '사내 Slack Server',
-        description: `유저와 Slack간의 상호작용을 처리하는 서버입니다.
-        Slack을 통해 젠킨스 빌드, 에러 로그 열람 등의 기능을 제공하고 있으며 Slack을 통해 다양한 기능들을 사용할 수 있도록 개발하고 있습니다.`,
+        description: `Node.js WebSocket을 사용하여 사내 Slack API Interaction을 처리해서 다양한 알림, 파일 열람 등과 같은 사내에 필요한 Slack 기능 등의 개발을 맡고 있습니다. 해당 작업을 통해 Slack을 이용하여 다양한 업무 처리 등이 가능해 졌고 Slack을 이용한 업무 처리를 더 효율적으로 만들고 있습니다.`,
         whatIdo: ['Slack을 통한 Jenkins 빌드, 에러 로그 열람 기능 개발'],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
@@ -25,7 +24,8 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: 'Game Automation',
-        description: `Android, iOS, Windows 게임 자동화 프레임워크입니다. Platform 및 Game을 제어할 수 있으며 Game Automation을 이용해 자동화 스크립트를 작성하여 반복적인 업무를 자동화할 수 있도록 기능을 제공하고 있습니다.`,
+        description: `Windows, Android, iOS 플랫폼에서 게임 QA, 프로파일링 등의 자동화가 가능한 프레임워크 개발을 맡고 있습니다.
+        해당 프레임워크를 통해 검은사막 모바일 등 사내 게임들의 컨텐츠 검증, 프로파일링 등을 안정적으로 자동화하여 반복적인 작업을 최소화 하였습니다.`,
         whatIdo: [
           'Jest 기반의 게임 자동화 Framework 설계 및 개발',
           'Appium을 이용한 Android, iOS, Windows 플랫폼 제어 개발',
@@ -37,7 +37,7 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: '검은사막 모바일',
-        description: `검은사막 모바일 소셜로그인, SDK 관리, CI/CD 등과 같은 Android, iOS 플랫폼 업무를 담당하고 있습니다.`,
+        description: `Android, iOS SDK 관리, 푸시, 소셜 로그인 개발 등을 맡고 있습니다. Android, iOS의 지속적인 정책 변화에 따라 필요한 것들을 대응하고 있으며 유저분들이 게임에 더 쉽게 접근할 수 있도록 다양한 플랫폼 기능들의 개발을 맡고 있습니다.`,
         whatIdo: ['Android, iOS SDK 유지보수', 'Android, iOS 소셜 로그인 유지보수', 'Android, iOS CI/CD 운영 및 개발'],
         whatIdoTitle: '담당 업무',
         skills: ['Android', 'iOS', 'Firebase', 'Java', 'Object-c', 'C++', 'Python'],
@@ -49,8 +49,7 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: '검은사막+',
-        description: `검은사막 온라인 및 콘솔 플레이에 유틸리티 기능을 제공해주는 애플리케이션입니다.
-        해당 애플리케이션을 통해 유저분들이 어느 공간에서든 휴대폰만 있으면 길드원들과 채팅 및 아이템 거래 등을 할 수 있도록 유저분들에게 편리성을 제공하고 있습니다.`,
+        description: `React-Native를 사용하여 검은사막 온라인 및 검은사막 콘솔의 유틸리티 앱 설계 및 개발을 맡고 있습니다. 앱 초기부터 개발을 맡고 있으며 일본, 대만, 러시아, 동남아, 북미, 유럽 등의 다양한 국가에게 앱 서비스를 제공하고 있습니다.`,
         whatIdoTitle: '담당 업무',
         whatIdo: ['검은사막+ 앱 구조 설계', 'WebView 개발', 'React UI 개발', 'Push Notification 개발', '로그인 개발'],
         skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist', 'WebView'],
@@ -68,8 +67,7 @@ const companyExperience: CompanyExperience = {
     projects: [
       {
         name: 'Comment Classifier',
-        description: `댓글에 대한 내용이 긍정인지 부정인지 판별하는 판별기입니다.
-        인턴으로 재직했던 회사라 모델을 상용 서비스까지 반영은 못했으나 충분히 회사가 긍정 및 부정 판별 기능을 고도화하여 상용 서비스에 반영할 수 있다는 것을 보여줬습니다.`,
+        description: `한글 텍스트에 대한 긍정과 부정을 판별하는 모델을 사내 시스템에 도입해 보는 작업을 해봤습니다. 모델을 도입하기 전, 라벨링된 데이터가 부족하여 뉴스 카테고리와 본문을 스크래핑하여 라벨링 데이터를 대량으로 수집하였고 대량의 데이터로 모델에 대한 성능을 검증한 다음 사내 시스템에 적용했습니다.`,
         whatIdoTitle: '담당 업무',
         whatIdo: [
           '모델 효율 검증을 위한 대용량 학습 데이터 수집',

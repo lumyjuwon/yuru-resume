@@ -60,9 +60,10 @@ export function Profile() {
       />
       <h3>About</h3>
       <Context>
-        {`현업에서 2년간 "개발" -> "검증" -> "배포" -> "이슈 대응" 프로세스를 경험해 봤으며 유저분들에게 제공되는 Product 및 백오피스 Tool 개발을 맡고 있습니다.
-          Product 개발 시에는 유저분들의 Need를 처리하는 것과 UI/UX를 중요시 여기며 Tool 개발 시에는 구성원 모두가 효율적으로 자주 사용하는 Tool이 되기 위해 UI/UX를 중요하게 여기고 있습니다.
-          이 외에도 다양한 업무들을 자동화하여 개발 프로세스 향상 경험을 가지고 있습니다.`}
+        {`현업에서 2년간 "개발", "검증", "배포", "이슈 대응" 프로세스를 경험했으며 Product 및 Game Tool 개발을 맡고 있는 Platform & Tool Programmer 입니다.
+          Node.js를 기반으로 크로스 플랫폼(Windows, Android, iOS)을 지원하며 업무 자동화, 게임 e2e 검증 등의 다양한 Game Tool을 개발하고 있으며
+          개발된 Game Tool을 이용해 업무 프로세스를 확립 하여 낭비되는 휴먼 리소스를 줄여 업무 생산성을 높이는데 기여하고 있습니다.
+          Game Tool 개발 이외에는 Windows, Android, iOS 게임 플랫폼 개발(SDK 작업)을 맡고 있습니다.`}
       </Context>
     </Container>
   );

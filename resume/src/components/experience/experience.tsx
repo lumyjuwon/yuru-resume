@@ -16,7 +16,7 @@ const companyExperience: CompanyExperience = {
     projects: [
       {
         name: '사내 Slack Server',
-        description: `Node.js WebSocket을 사용하여 사내 Slack API Interaction을 처리해서 다양한 알림, 파일 열람 등과 같은 사내에 필요한 Slack 기능 등의 개발을 맡고 있습니다. 해당 작업을 통해 Slack을 이용하여 다양한 업무 처리 등이 가능해 졌고 Slack을 이용한 업무 처리를 더 효율적으로 만들고 있습니다.`,
+        description: `Slack Interaction을 처리하여 다양한 알림, 파일 열람 등과 같은 사내에 필요한 Slack 기능 등의 개발을 맡고 있습니다. 해당 작업을 통해 Slack에서 젠킨스 빌드 진행 등과 같은 다양한 업무를 Slack에서 처리할 수 있도록 개발자 분들에게 제공하고 있습니다.`,
         whatIdo: ['Slack을 통한 Jenkins 빌드, 에러 로그 열람 기능 개발'],
         whatIdoTitle: '담당 업무',
         period: '2021.05 ~ 현재',
@@ -24,12 +24,12 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: 'Game Automation',
-        description: `Windows, Android, iOS 플랫폼에서 게임 QA, 프로파일링 등의 자동화가 가능한 프레임워크 개발을 맡고 있습니다.
-        해당 프레임워크를 통해 검은사막 모바일 등 사내 게임들의 컨텐츠 검증, 프로파일링 등을 안정적으로 자동화하여 반복적인 작업을 최소화 하였습니다.`,
+        description: `Windows, Android, iOS 플랫폼에서 e2e 테스트인 게임 컨텐츠 검증, 프로파일링 등의 자동화가 가능한 프레임워크 개발을 맡고 있습니다.
+        해당 프레임워크를 통해 검은사막 모바일 등 사내 게임들의 컨텐츠 검증, 프로파일링 등을 안정적으로 자동화하여 반복적인 작업 최소화와 업무 프로세스 등을 개선하였습니다.`,
         whatIdo: [
           'Jest 기반의 게임 자동화 Framework 설계 및 개발',
           'Appium을 이용한 Android, iOS, Windows 플랫폼 제어 개발',
-          '검은사막 모바일 프로파일링, 컨텐츠 검증 등의 CI 구축'
+          '검은사막 모바일 컨텐츠 검증, 프로파일링 등의 CI 구축'
         ],
         whatIdoTitle: '담당 업무',
         period: '2020.10 ~ 현재',
@@ -51,7 +51,7 @@ const companyExperience: CompanyExperience = {
         name: '검은사막+',
         description: `React-Native를 사용하여 검은사막 온라인 및 검은사막 콘솔의 유틸리티 앱 설계 및 개발을 맡고 있습니다. 앱 초기부터 개발을 맡고 있으며 일본, 대만, 러시아, 동남아, 북미, 유럽 등의 다양한 국가에게 앱 서비스를 제공하고 있습니다.`,
         whatIdoTitle: '담당 업무',
-        whatIdo: ['검은사막+ 앱 구조 설계', 'WebView 개발', 'React UI 개발', 'Push Notification 개발', '로그인 개발'],
+        whatIdo: ['검은사막+ 앱 구조 설계', '앱 Front 작업', 'WebView 개발', 'Push Notification 개발', '로그인 개발'],
         skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist', 'WebView'],
         period: '2019.08 ~ 현재',
         urls: [

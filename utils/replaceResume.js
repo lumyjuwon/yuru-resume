@@ -1,8 +1,12 @@
+const childProcess = require('child_process')
 const fs = require('fs-extra');
 const resumePath = '../resume/build';
 const outputPath = '..';
 
 (async () => {
+  // Build
+  childProcess.execSync('cd ../resume/ & npm run build');
+
   // Delete Old Build
   const removePromises = [];
   const targets = ['static', 'asset-manifest.json', 'favicon.ico', 'index.html', 'manifest.json', 'robots.txt'];

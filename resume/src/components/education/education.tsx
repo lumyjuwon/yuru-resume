@@ -17,7 +17,7 @@ export function Education() {
   return (
     <Container>
       <h3>Education</h3>
-      <UniversityName>국민대학교 소프트웨어학부</UniversityName>
+      <UniversityName>국민대학교 소프트웨어학부 (군휴학)</UniversityName>
       <UniversityDate>(2018 ~)</UniversityDate>
     </Container>
   );

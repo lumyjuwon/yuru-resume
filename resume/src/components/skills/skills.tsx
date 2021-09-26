@@ -37,13 +37,18 @@ export function Skills(props: Props) {
       <SkillDescription title={'Language'} description={'Typescript'} />
       <SkillDescription title={'Front-End'} description={'React, React-Native, Styled-Component'} />
       <SkillDescription title={'Back-End'} description={'Node.js'} />
-      <SkillDescription title={'Technologies'} description={'Android, iOS, Jenkins, Appium'} />
+      <SkillDescription title={'Platform'} description={'Android, iOS'} />
+      <SkillDescription title={'VCS'} description={'Git, Svn'} />
+      <SkillDescription title={'Technologies'} description={'Jenkins'} />
 
       <h3>Additional Skills</h3>
       <SkillDescription title={'Language'} description={'Python, Java, C#, C++'} />
-      <SkillDescription title={'Front-End'} description={'Nextjs, Apollo-Client'} />
-      <SkillDescription title={'Back-End'} description={'Express, Mongoose, Apollo-Server'} />
-      <SkillDescription title={'Technologies'} description={'MongoDB, GraphQL'} />
+      <SkillDescription title={'Front-End'} description={'Apollo-Client'} />
+      <SkillDescription title={'Back-End'} description={'Nextjs, Express, Mongoose, Apollo-Server'} />
+      <SkillDescription title={'Database'} description={'MongoDB'} />
+      <SkillDescription title={'QueryLanguage'} description={'SQL, GraphQL'} />
+      <SkillDescription title={'Platform'} description={'Windows, MacOS, Linux'} />
+      <SkillDescription title={'VCS'} description={'Perforce'} />
     </Container>
   );
 }

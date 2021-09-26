@@ -37,8 +37,13 @@ const companyExperience: CompanyExperience = {
       },
       {
         name: '검은사막 모바일',
-        description: `Android, iOS SDK 관리, 푸시, 소셜 로그인 개발 등을 맡고 있으며 Android, iOS의 지속적인 정책 변화에 따라 필요한 것들을 대응할 뿐만 아니라 유저분들이 게임에 더 쉽게 접근할 수 있도록 다양한 플랫폼 기능들을 개발하고 있습니다.`,
-        whatIdo: ['Android, iOS SDK 유지보수', 'Android, iOS 소셜 로그인 유지보수', 'Android, iOS CI/CD 운영 및 개발'],
+        description: `Android, iOS SDK 관리, 푸시, 소셜 로그인 개발과 빌드 및 배포를 맡고 있으며 Android, iOS의 지속적인 정책 변화에 따라 필요한 작업을 대응하고 있습니다.`,
+        whatIdo: [
+          'Android, iOS SDK 유지보수',
+          'Android, iOS 소셜 로그인 유지보수',
+          'Android, iOS CI/CD 운영 및 개발',
+          'Android, iOS 빌드 및 배포 관리'
+        ],
         whatIdoTitle: '담당 업무',
         skills: ['Android', 'iOS', 'Firebase', 'Java', 'Object-c', 'C++', 'Python'],
         period: '2020.01 ~ 현재',
@@ -51,7 +56,7 @@ const companyExperience: CompanyExperience = {
         name: '검은사막+',
         description: `React-Native를 사용하여 검은사막 온라인 및 검은사막 콘솔의 유틸리티 앱 설계 및 개발을 맡고 있습니다. 앱 초기부터 개발을 담당하고 있으며 일본, 대만, 러시아, 동남아, 북미, 유럽 등의 다양한 국가에 서비스를 제공하고 있습니다.`,
         whatIdoTitle: '담당 업무',
-        whatIdo: ['검은사막+ 앱 구조 설계', '앱 Front 작업', 'WebView 개발', 'Push Notification 개발', '로그인 개발'],
+        whatIdo: ['검은사막+ 앱 구조 설계', '앱 Front 개발'],
         skills: ['React-Native', 'Typescript', 'Android', 'iOS', 'Firebase', 'Redux', 'Redux-Saga', 'Redux-Persist', 'WebView'],
         period: '2019.08 ~ 현재',
         urls: [

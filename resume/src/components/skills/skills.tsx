@@ -37,7 +37,6 @@ export function Skills(props: Props) {
       <SkillDescription title={'Language'} description={'Typescript'} />
       <SkillDescription title={'Front-End'} description={'React, React-Native, Styled-Component'} />
       <SkillDescription title={'Back-End'} description={'Node.js'} />
-      <SkillDescription title={'Platform'} description={'Android, iOS'} />
       <SkillDescription title={'VCS'} description={'Git, Svn'} />
       <SkillDescription title={'Technologies'} description={'Jenkins'} />
 
@@ -47,7 +46,6 @@ export function Skills(props: Props) {
       <SkillDescription title={'Back-End'} description={'Nextjs, Express, Mongoose, Apollo-Server'} />
       <SkillDescription title={'Database'} description={'MongoDB'} />
       <SkillDescription title={'QueryLanguage'} description={'SQL, GraphQL'} />
-      <SkillDescription title={'Platform'} description={'Windows, MacOS, Linux'} />
       <SkillDescription title={'VCS'} description={'Perforce'} />
     </Container>
   );

@@ -20,7 +20,11 @@ export module Prebuild {
   }
 
   export async function run() {
+    console.log('Running Prebuild');
+
     await applySettingConfig();
     await applyPageConfig();
+
+    console.log('Complete Prebuild');
   }
 }

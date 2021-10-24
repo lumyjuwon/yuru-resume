@@ -1,4 +1,4 @@
-export interface Profile {
+export interface IProfile {
   name: string;
   email: string;
   github: string;
@@ -6,7 +6,7 @@ export interface Profile {
   about: string;
 }
 
-export interface Skills {
+export interface ISkills {
   main: {
     [key: string]: string;
   };
@@ -25,24 +25,24 @@ export interface IProject {
   urls?: string[];
 }
 
-export interface Experience {
+export interface IExperience {
   company: string;
   startDate: string;
   endDate?: string;
   projects: IProject[];
 }
 
-export interface Education {
+export interface IEducation {
   title: string;
   period: string;
 }
 
-export interface Resume {
-  profile: Profile;
-  skills: Skills;
-  experiences: Experience[];
+export interface IResume {
+  profile: IProfile;
+  skills: ISkills;
+  experiences: IExperience[];
   toyProjects: IProject[];
-  education: Education[];
+  education: IEducation[];
 }
 
 export const Resources = {
@@ -54,5 +54,5 @@ export const Resources = {
     appstore: require('./icons/appstore_512.png').default,
     url: require('./icons/url.png').default
   },
-  resume: require('./resume.json') as Resume
+  resume: require('./resume.json') as IResume
 };

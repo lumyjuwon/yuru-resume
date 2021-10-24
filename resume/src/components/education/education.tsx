@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Resources } from '../../resources/index';
 
 const Container = styled.div({
   alignItems: 'center'
@@ -17,8 +18,12 @@ export function Education() {
   return (
     <Container>
       <h3>Education</h3>
-      <UniversityName>국민대학교 소프트웨어학부 (군휴학)</UniversityName>
-      <UniversityDate>(2018 ~)</UniversityDate>
+      {Resources.resume.education.map((edu) => (
+        <div>
+          <UniversityName>{edu.title}</UniversityName>
+          <UniversityDate>{edu.period}</UniversityDate>
+        </div>
+      ))}
     </Container>
   );
 }

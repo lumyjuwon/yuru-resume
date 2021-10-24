@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { Resources } from '../../resources';
+import { Resources, IProject } from '../../resources';
 
-export interface ProjectProps {
-  name: string;
-  description: string;
-  whatIdo: string[];
-  whatIdoTitle: string;
-  skills: string[];
-  period: string;
-  urls?: string[];
-}
+// export interface ProjectProps {
+//   name: string;
+//   description: string;
+//   whatIdo: string[];
+//   whatIdoTitle: string;
+//   skills: string[];
+//   period: string;
+//   urls?: string[];
+// }
 
 const SkillShieldContainer = styled.div({
   display: 'inline-block',
@@ -100,7 +100,7 @@ const Container = styled.div({
 });
 
 interface Props {
-  project: ProjectProps;
+  project: IProject;
 }
 
 export function Project(props: Props) {

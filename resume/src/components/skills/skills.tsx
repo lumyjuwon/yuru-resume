@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Resources } from '../../resources';
 
 const SkillDescriptionContainer = styled.div({
   marginTop: '8px'
@@ -34,19 +35,14 @@ export function Skills(props: Props) {
   return (
     <Container>
       <h3>Main Skills</h3>
-      <SkillDescription title={'Language'} description={'Typescript'} />
-      <SkillDescription title={'Front-End'} description={'React, React-Native, Styled-Component'} />
-      <SkillDescription title={'Back-End'} description={'Node.js'} />
-      <SkillDescription title={'VCS'} description={'Git, Svn'} />
-      <SkillDescription title={'Technologies'} description={'Jenkins'} />
+      {Object.keys(Resources.resume.skills.main).map((title) => (
+        <SkillDescription title={title} description={Resources.resume.skills.main[title]} />
+      ))}
 
       <h3>Additional Skills</h3>
-      <SkillDescription title={'Language'} description={'Python, Java, C#, C++'} />
-      <SkillDescription title={'Front-End'} description={'Apollo-Client'} />
-      <SkillDescription title={'Back-End'} description={'Nextjs, Express, Mongoose, Apollo-Server'} />
-      <SkillDescription title={'Database'} description={'MongoDB'} />
-      <SkillDescription title={'QueryLanguage'} description={'SQL, GraphQL'} />
-      <SkillDescription title={'VCS'} description={'Perforce'} />
+      {Object.keys(Resources.resume.skills.additional).map((title) => (
+        <SkillDescription title={title} description={Resources.resume.skills.additional[title]} />
+      ))}
     </Container>
   );
 }

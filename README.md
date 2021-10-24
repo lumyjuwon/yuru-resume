@@ -2,8 +2,8 @@
 lumy-resume offers simple resume template made by react  
 the guide in that document is based on the github page
 
-## Example
-
+## Sample
+https://lumyjuwon.github.io/lumy-resume/sample/
 
 ## How to make my resume
 1. **fork** this project in the github

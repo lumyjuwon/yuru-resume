@@ -1,8 +1,15 @@
+import { promises as fs } from 'fs';
 import path from 'path';
 
-const PathMap = {
+export const PathMap = {
   userPath: path.resolve(__dirname, '../../user'),
   resumePath: path.resolve(__dirname, '../../resume')
 };
 
-export { PathMap };
+export async function validatePathMap() {
+  const pathKeys = Object.keys(PathMap);
+
+  for (const pathKey of pathKeys) {
+    await fs.access(PathMap[pathKey as keyof typeof PathMap]);
+  }
+}

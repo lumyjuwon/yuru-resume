@@ -38,10 +38,11 @@ jobs:
         working-directory: deploy
         run: yarn run deploy
 
-      - name: Push
+      - name: Commit
         run: |
           git config --global user.name 'lumyjuwon'
           git config --global user.email 'lumyjuwon@gmail.com'
-          git add -A
-          git commit -m "Deploy Resume"
+          git commit -am "Deploy Resume"
+      - name: Push
+        run: |
           git push

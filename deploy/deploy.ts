@@ -1,5 +1,5 @@
 import { Afterbuild } from './src/afterbuild';
-import { Args } from './src/Args';
+import { Args } from './src/args';
 import { Build } from './src/build';
 import { validatePathMap } from './src/pathMap';
 import { Prebuild } from './src/prebuild';

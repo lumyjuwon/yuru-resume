@@ -3,10 +3,6 @@ import { promises as fs } from 'fs';
 import { PathMap } from './pathMap';
 
 export module Prebuild {
-  async function applySettingConfig() {
-    const config = require(`${PathMap.userPath}/setting.json`);
-  }
-
   async function applyPageConfig() {
     function searchTarget(target: string, regex: RegExp): string {
       const execed = regex.exec(target);
@@ -48,7 +44,7 @@ export module Prebuild {
   export async function run() {
     console.log('Running Prebuild');
 
-    const applies = [applySettingConfig(), applyPageConfig(), applyResumeConfig()];
+    const applies = [applyPageConfig(), applyResumeConfig()];
     await Promise.all(applies);
 
     console.log('Complete Prebuild');

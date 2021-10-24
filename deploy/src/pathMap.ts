@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export const PathMap = {
+  root: path.resolve(__dirname, '../../'),
   userPath: path.resolve(__dirname, '../../user'),
   resumePath: path.resolve(__dirname, '../../resume')
 };

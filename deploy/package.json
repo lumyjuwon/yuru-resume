@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "deploy.ts",
-  "dependencies": {},
+  "dependencies": {
+    "fs-extra": "^10.0.0"
+  },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/node": "^16.11.4",
     "typescript": "^4.4.4"
   },

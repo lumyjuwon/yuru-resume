@@ -8,7 +8,10 @@ const SkillShieldContainer = styled.div({
   borderRadius: '4px',
   marginTop: '16px',
   marginRight: '8px',
-  padding: '3px 6px 3px 6px'
+  padding: '3px 6px 3px 6px',
+  '@media screen and (max-width: 768px)': {
+    marginTop: '8px'
+  }
 });
 
 function SkillShield(props: { children: string }) {
@@ -19,9 +22,27 @@ function SkillShield(props: { children: string }) {
   );
 }
 
+const ProjectInfoWrappwer = styled.div({
+  display: 'flex',
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    display: 'block'
+  }
+});
+
 const ProjectTitle = styled.span({
   fontSize: '16px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  '@media screen and (max-width: 768px)': {
+    display: 'block'
+  }
+});
+
+const ProjectPeriod = styled.span({
+  marginLeft: '4px',
+  '@media screen and (max-width: 768px)': {
+    marginLeft: '0px'
+  }
 });
 
 function ProjectInfo(props: { title: string; description: string; period: string; urls?: string[] }) {
@@ -47,8 +68,10 @@ function ProjectInfo(props: { title: string; description: string; period: string
   return (
     <>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <ProjectTitle>{props.title}</ProjectTitle>
-        <span style={{ marginLeft: '4px' }}>({props.period})</span>
+        <ProjectInfoWrappwer>
+          <ProjectTitle>{props.title}</ProjectTitle>
+          <ProjectPeriod>({props.period})</ProjectPeriod>
+        </ProjectInfoWrappwer>
         {props.urls &&
           props.urls.map((url: string) => {
             return <UrlIcon key={url} url={url} />;
@@ -94,14 +117,12 @@ interface Props {
   project: IProject;
 }
 
-export function Project(props: Props) {
-  const { project } = props;
-
+export function Project({ project }: Props) {
   return (
     <Container>
       <ProjectInfo title={project.name} description={project.description} period={project.period} urls={project.urls} />
       <DoDescription descriptions={project.whatIdo} descriptionTitle={project.whatIdoTitle} />
-      {props.project.skills.map((skill: string) => {
+      {project.skills.map((skill: string) => {
         return <SkillShield key={skill}>{skill}</SkillShield>;
       })}
     </Container>

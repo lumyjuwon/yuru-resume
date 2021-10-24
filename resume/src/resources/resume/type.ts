@@ -42,5 +42,5 @@ export interface IResume {
   skills: ISkills;
   experiences: IExperience[];
   toyProjects: IProject[];
-  education: IEducation[];
+  educations: IEducation[];
 }

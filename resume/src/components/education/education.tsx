@@ -6,22 +6,28 @@ const Container = styled.div({
 });
 
 const UniversityName = styled.span({
-  fontSize: '16px'
+  fontSize: '16px',
+  '@media screen and (max-width: 768px)': {
+    display: 'block'
+  }
 });
 
 const UniversityDate = styled.span({
   fontSize: '14px',
-  marginLeft: '8px'
+  marginLeft: '8px',
+  '@media screen and (max-width: 768px)': {
+    marginLeft: '0px'
+  }
 });
 
 export function Education() {
   return (
     <Container>
       <h3>Education</h3>
-      {Resources.resume.education.map((edu) => (
+      {Resources.resume.educations.map((education) => (
         <div>
-          <UniversityName>{edu.title}</UniversityName>
-          <UniversityDate>{edu.period}</UniversityDate>
+          <UniversityName>{education.title}</UniversityName>
+          <UniversityDate>{education.period}</UniversityDate>
         </div>
       ))}
     </Container>

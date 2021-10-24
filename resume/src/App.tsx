@@ -4,7 +4,10 @@ import { Profile, Experience, Education, Skills, ToyProject } from './components
 const Container = styled.div({
   width: '52%',
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  '@media screen and (max-width: 768px)': {
+    width: '90%'
+  }
 });
 
 const Border = styled.div({

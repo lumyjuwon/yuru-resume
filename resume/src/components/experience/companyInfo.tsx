@@ -8,12 +8,18 @@ const Container = styled.div({
 
 const CompanyTitle = styled.span({
   fontSize: '18px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  '@media screen and (max-width: 768px)': {
+    display: 'block'
+  }
 });
 
 const EmployedPeriod = styled.span({
   fontSize: '18px',
-  marginLeft: '8px'
+  marginLeft: '8px',
+  '@media screen and (max-width: 768px)': {
+    marginLeft: '0px'
+  }
 });
 
 const EmployedPeriodDate = styled.span({

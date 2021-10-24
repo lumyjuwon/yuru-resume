@@ -1,15 +1,6 @@
 import styled from 'styled-components';
-import { Resources, IProject } from '../../resources';
-
-// export interface ProjectProps {
-//   name: string;
-//   description: string;
-//   whatIdo: string[];
-//   whatIdoTitle: string;
-//   skills: string[];
-//   period: string;
-//   urls?: string[];
-// }
+import { Resources } from '../../resources';
+import { IProject } from '../../resources/resume';
 
 const SkillShieldContainer = styled.div({
   display: 'inline-block',

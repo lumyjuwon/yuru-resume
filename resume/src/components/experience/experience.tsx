@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { CompanyInfo } from './companyInfo';
 import { Project } from '../common/project';
-import { Resources, IProject } from '../../resources';
+import { Resources } from '../../resources';
+import { IProject } from '../../resources/resume';
 
 const Container = styled.div({});
 

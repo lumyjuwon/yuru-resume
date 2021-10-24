@@ -1,4 +1,3 @@
-import './App.css';
 import styled from 'styled-components';
 import { Profile, Experience, Education, Skills, ToyProject } from './components';
 

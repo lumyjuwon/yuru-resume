@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icons } from '../../resources';
+import { Resources } from '../../resources';
 
 export interface ProjectProps {
   name: string;
@@ -37,13 +37,13 @@ function ProjectInfo(props: { title: string; description: string; period: string
   function UrlIcon(urlIconProps: { url: string }) {
     let icon;
     if (urlIconProps.url.includes('google')) {
-      icon = Icons.playstore;
+      icon = Resources.icons.playstore;
     } else if (urlIconProps.url.includes('apple')) {
-      icon = Icons.appstore;
+      icon = Resources.icons.appstore;
     } else if (urlIconProps.url.includes('github.com')) {
-      icon = Icons.github;
+      icon = Resources.icons.github;
     } else {
-      icon = Icons.url;
+      icon = Resources.icons.url;
     }
 
     return (

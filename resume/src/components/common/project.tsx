@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Resources } from '../../resources';
-import { IProject } from '../../resources/resume';
+import { IProject } from '../../resources/resume/type';
 
 const SkillShieldContainer = styled.div({
   display: 'inline-block',

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { CompanyInfo } from './companyInfo';
 import { Project } from '../common/project';
 import { Resources } from '../../resources';
-import { IProject } from '../../resources/resume';
+import { IProject } from '../../resources/resume/type';
 
 const Container = styled.div({});
 

@@ -1,4 +1,4 @@
-import { IResume } from './resume';
+import { IResume } from './resume/type';
 
 export const Resources = {
   icons: {

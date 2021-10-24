@@ -8,22 +8,48 @@ export module Prebuild {
   }
 
   async function applyPageConfig() {
+    function searchTarget(target: string, regex: RegExp): string {
+      const execed = regex.exec(target);
+
+      if (execed === null) {
+        throw new Error(`${regex} does not matched`);
+      }
+
+      const replaceTarget = target.substr(execed.index, execed[0].length);
+
+      return replaceTarget;
+    }
+
     const page = require(`${PathMap.userPath}/page.json`);
 
     const indexHtmlPath = path.resolve(PathMap.resumePath, './public/index.html');
-    let indexHtml = (await fs.readFile(indexHtmlPath)).toString();
-    indexHtml = indexHtml
-      .replace('<title>title</title>', `<title>${page.title}</title>`)
-      .replace('content="content"', `content="${page.description}"`);
+    const indexHtml = (await fs.readFile(indexHtmlPath)).toString();
 
-    await fs.writeFile(indexHtmlPath, indexHtml);
+    const searchPair = [
+      { targetRegex: /<title>.+<\/title>/, replacedText: `<title>${page.title}</title>` },
+      { targetRegex: /      content=".+"/, replacedText: `      content="${page.description}"` }
+    ];
+    let replacedIndexHtml = indexHtml;
+    for (const searh of searchPair) {
+      const replaceTarget = searchTarget(indexHtml, searh.targetRegex);
+      replacedIndexHtml = replacedIndexHtml.replace(replaceTarget, searh.replacedText);
+    }
+
+    await fs.writeFile(indexHtmlPath, replacedIndexHtml);
+  }
+
+  async function applyResumeConfig() {
+    const resume = await fs.readFile(`${PathMap.userPath}/resume.json`);
+
+    const destinationResumePath = `${PathMap.resumePath}/src/resources/resume/resume.json`;
+    await fs.writeFile(destinationResumePath, resume);
   }
 
   export async function run() {
     console.log('Running Prebuild');
 
-    await applySettingConfig();
-    await applyPageConfig();
+    const applies = [applySettingConfig(), applyPageConfig(), applyResumeConfig()];
+    await Promise.all(applies);
 
     console.log('Complete Prebuild');
   }

@@ -6,3 +6,12 @@ export const Resources = {
   appstore_512: require('./icons/appstore_512.png').default,
   url: require('./icons/url.png').default
 };
+
+export const Icons = {
+  gmail: Resources.gmail_512,
+  github: Resources.github_512,
+  linkedin: Resources.linkedin_512,
+  playstore: Resources.playstore_512,
+  appstore: Resources.appstore_512,
+  url: Resources.url
+};

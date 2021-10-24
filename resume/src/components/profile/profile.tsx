@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Resources } from '../../resources';
+import { Icons } from '../../resources';
 
 const IconInfoContainer = styled.div({
   display: 'flex',
@@ -50,10 +50,10 @@ export function Profile() {
   return (
     <Container>
       <h3>성주원 (SeongJuWon)</h3>
-      <IconInfo src={Resources.gmail_512} alt={'GmailIcon'} href={'mailto:lumyjuwon@gmail.com'} info={'lumyjuwon@gmail.com'} />
-      <IconInfo src={Resources.github_512} alt={'GithubIcon'} href={'https://github.com/lumyjuwon'} info={'https://github.com/lumyjuwon'} />
+      <IconInfo src={Icons.gmail} alt={'GmailIcon'} href={'mailto:lumyjuwon@gmail.com'} info={'lumyjuwon@gmail.com'} />
+      <IconInfo src={Icons.github} alt={'GithubIcon'} href={'https://github.com/lumyjuwon'} info={'https://github.com/lumyjuwon'} />
       <IconInfo
-        src={Resources.linkedin_512}
+        src={Icons.linkedin}
         alt={'LinkedInIcon'}
         href={'https://www.linkedin.com/in/juwon-seong-a39b64170/'}
         info={'https://www.linkedin.com/in/juwon-seong-a39b64170/'}

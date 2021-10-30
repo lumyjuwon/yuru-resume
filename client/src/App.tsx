@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { BrowserRouter as Router, Switch, Route, Link, RouteComponentProps } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { Profile, Experience, Education, Skills, ToyProject } from './components';
-import { resumeFilenames, defaultResume } from './resources';
+import { changeLang, langCodes } from './resources/lang';
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div({
   width: '52%',
@@ -18,45 +19,40 @@ const Border = styled.div({
   margin: '24px 0 6px 0'
 });
 
-interface ResumeProps extends RouteComponentProps {}
+function App() {
+  // 기본 도메인일 시:
+  //   기본 언어 디텍
+  //   컴포넌트 -> i18n -> 리소스
+  //   기본 언어 -> 영어 -> 맨 위 레쥬메
 
-function Resume({ location }: ResumeProps) {
-  const lang = location.pathname === '/' ? defaultResume.replace('resume-', '').replace('.json', '') : location.pathname.replace('/', '');
+  //   언어 버튼 -> translate
+
+  // 아닐 시:
+  //   url parsing -> 언어 translate
+  useTranslation();
+
   return (
     <Container>
-      <Profile lang={lang} />
-      <Border />
-      <Skills lang={lang} />
-      <Border />
-      <Experience lang={lang} />
-      <Border />
-      <ToyProject lang={lang} />
-      <Border />
-      <Education lang={lang} />
-    </Container>
-  );
-}
-
-function App() {
-  const languages = resumeFilenames.map((filename) => filename.replace('resume-', '').replace('.json', ''));
-
-  return (
-    <Router>
       <div>
         <ul>
-          {languages.map((lang) => (
-            <li key={lang}>
-              <Link to={`${lang}`}>{lang}</Link>
+          {Object.keys(langCodes).map((code) => (
+            <li key={code} onClick={() => changeLang(code)}>
+              {code}
             </li>
           ))}
         </ul>
       </div>
 
-      <Switch>
-        <Route exact path='/' component={Resume} />
-        <Route exact path='/:code' component={Resume} />
-      </Switch>
-    </Router>
+      <Profile />
+      <Border />
+      <Skills />
+      <Border />
+      <Experience />
+      <Border />
+      <ToyProject />
+      <Border />
+      <Education />
+    </Container>
   );
 }
 

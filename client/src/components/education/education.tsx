@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Resources } from '../../resources/index';
+import { trans } from '../../resources/lang';
+import { IEducation } from '../../resources/resumes/type';
 
 const Container = styled.div({
   alignItems: 'center'
@@ -20,15 +21,13 @@ const UniversityDate = styled.span({
   }
 });
 
-interface Props {
-  lang: string;
-}
+export function Education() {
+  const educations: IEducation[] = trans('educations');
 
-export function Education({ lang }: Props) {
   return (
     <Container>
       <h3>Education</h3>
-      {Resources.resumeResources[`resume-${lang}`].educations.map((education) => (
+      {educations.map((education) => (
         <div key={education.title}>
           <UniversityName>{education.title}</UniversityName>
           <UniversityDate>{education.period}</UniversityDate>

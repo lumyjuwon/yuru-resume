@@ -1,20 +1,18 @@
 import styled from 'styled-components';
 import { CompanyInfo } from './companyInfo';
 import { Project } from '../common/project';
-import { Resources } from '../../resources';
-import { IProject } from '../../resources/resumes/type';
+import { IExperience, IProject } from '../../resources/resumes/type';
+import { trans } from '../../resources/lang';
 
 const Container = styled.div({});
 
-interface Props {
-  lang: string;
-}
+export function Experience() {
+  const experiences: IExperience[] = trans('experiences');
 
-export function Experience({ lang }: Props) {
   return (
     <Container>
       <h3>Work Experience</h3>
-      {Resources.resumeResources[`resume-${lang}`].experiences.map((experience) => (
+      {experiences.map((experience) => (
         <CompanyInfo
           key={experience.company}
           companyName={experience.company}

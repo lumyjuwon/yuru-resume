@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 import { Project } from '../common/project';
-import { Resources } from '../../resources';
+import { trans } from '../../resources/lang';
+import { IProject } from '../../resources/resumes/type';
 
 const Container = styled.div({});
 
-interface Props {
-  lang: string;
-}
-
-export function ToyProject({ lang }: Props) {
-  const projects = Resources.resumeResources[`resume-${lang}`].toyProjects;
+export function ToyProject() {
+  const projects: IProject[] = trans('toyProjects');
 
   return (
     <Container>

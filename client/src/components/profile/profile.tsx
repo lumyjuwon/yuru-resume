@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Resources } from '../../resources';
+import { trans } from '../../resources/lang';
 
 const IconInfoContainer = styled.div({
   display: 'flex',
@@ -46,34 +47,15 @@ const Context = styled.span({
   fontSize: '14px'
 });
 
-interface Props {
-  lang: string;
-}
-
-export function Profile({ lang }: Props) {
+export function Profile() {
   return (
     <Container>
-      <h3>{Resources.resumeResources[`resume-${lang}`].profile.name}</h3>
-      <IconInfo
-        src={Resources.iconResources.icons.gmail}
-        alt={'GmailIcon'}
-        href={`mailto:${Resources.resumeResources[`resume-${lang}`].profile.email}`}
-        info={Resources.resumeResources[`resume-${lang}`].profile.email}
-      />
-      <IconInfo
-        src={Resources.iconResources.icons.github}
-        alt={'GithubIcon'}
-        href={Resources.resumeResources[`resume-${lang}`].profile.github}
-        info={Resources.resumeResources[`resume-${lang}`].profile.github}
-      />
-      <IconInfo
-        src={Resources.iconResources.icons.linkedin}
-        alt={'LinkedInIcon'}
-        href={Resources.resumeResources[`resume-${lang}`].profile.linkedin}
-        info={Resources.resumeResources[`resume-${lang}`].profile.linkedin}
-      />
+      <h3>{trans('profile.name')}</h3>
+      <IconInfo src={Resources.icons.gmail} alt={'GmailIcon'} href={`mailto:${trans('profile.email')}`} info={trans('profile.email')} />
+      <IconInfo src={Resources.icons.github} alt={'GithubIcon'} href={trans('profile.github')} info={trans('profile.github')} />
+      <IconInfo src={Resources.icons.linkedin} alt={'LinkedInIcon'} href={trans('profile.linkedin')} info={trans('profile.linkedin')} />
       <h3>About</h3>
-      <Context>{Resources.resumeResources[`resume-${lang}`].profile.about}</Context>
+      <Context>{trans('profile.about')}</Context>
     </Container>
   );
 }

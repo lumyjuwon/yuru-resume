@@ -8,7 +8,7 @@
   },
   "skills": {
     "main": {
-      "Language": "TypeScript",
+      "Language": "타입스크립트",
       "Front-End": "React, React-Native, Styled-Component",
       "Back-End": "Node.js"
     },
@@ -20,7 +20,7 @@
   },
   "experiences": [
     {
-      "company": "Yuru",
+      "company": "유루캠",
       "startDate": "2021-02",
       "projects": [
         {
@@ -70,7 +70,7 @@
   ],
   "toyProjects": [
     {
-      "name": "lumy-resume",
+      "name": "레쥬메",
       "description": "What a good resume! lumy-resume is the simplest resume.",
       "whatIdoTitle": "Responsibilities",
       "whatIdo": ["Content design and development"],
@@ -88,7 +88,7 @@
   ],
   "educations": [
     {
-      "title": "Camp (Vacation)",
+      "title": "켐핑",
       "period": "(2021 ~)"
     }
   ]

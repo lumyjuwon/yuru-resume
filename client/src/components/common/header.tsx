@@ -9,7 +9,7 @@ function DownloadHeader() {
       target='_blank'
       rel='noreferrer'
     >
-      <img src={Resources.iconResources.icons.pdf} width={36} alt={'Icon'} />
+      <img src={Resources.icons.pdf} width={36} alt={'Icon'} />
     </a>
   );
 }

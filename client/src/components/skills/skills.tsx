@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Resources } from '../../resources';
+import { trans } from '../../resources/lang';
 
 const SkillDescriptionContainer = styled.div({
   marginTop: '8px'
@@ -29,21 +29,20 @@ function SkillDescription(props: SKillDescriptionProps) {
 
 const Container = styled.div({});
 
-interface Props {
-  lang: string;
-}
+export function Skills() {
+  const mainSkills: any = trans('skills.main');
+  const additionalSkills: any = trans('skills.additional');
 
-export function Skills({ lang }: Props) {
   return (
     <Container>
       <h3>Main Skills</h3>
-      {Object.keys(Resources.resumeResources[`resume-${lang}`].skills.main).map((title) => (
-        <SkillDescription key={title} title={title} description={Resources.resumeResources[`resume-${lang}`].skills.main[title]} />
+      {Object.keys(mainSkills).map((title) => (
+        <SkillDescription key={title} title={title} description={mainSkills[title]} />
       ))}
 
       <h3>Additional Skills</h3>
-      {Object.keys(Resources.resumeResources[`resume-${lang}`].skills.additional).map((title) => (
-        <SkillDescription key={title} title={title} description={Resources.resumeResources[`resume-${lang}`].skills.additional[title]} />
+      {Object.keys(additionalSkills).map((title) => (
+        <SkillDescription key={title} title={title} description={additionalSkills[title]} />
       ))}
     </Container>
   );

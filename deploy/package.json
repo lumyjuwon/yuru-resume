@@ -5,6 +5,7 @@
   "main": "deploy.ts",
   "dependencies": {
     "fs-extra": "^10.0.0",
+    "puppeteer": "^10.4.0",
     "ts-node": "^10.4.0"
   },
   "devDependencies": {

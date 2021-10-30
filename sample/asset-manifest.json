@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.23338446.chunk.css",
-    "main.js": "./static/js/main.77c35a53.chunk.js",
-    "main.js.map": "./static/js/main.77c35a53.chunk.js.map",
+    "main.css": "./static/css/main.7ece5316.chunk.css",
+    "main.js": "./static/js/main.ae7a039d.chunk.js",
+    "main.js.map": "./static/js/main.ae7a039d.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.efc74ee2.js",
     "runtime-main.js.map": "./static/js/runtime-main.efc74ee2.js.map",
     "static/js/2.87b6ecd1.chunk.js": "./static/js/2.87b6ecd1.chunk.js",
     "static/js/2.87b6ecd1.chunk.js.map": "./static/js/2.87b6ecd1.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.23338446.chunk.css.map": "./static/css/main.23338446.chunk.css.map",
+    "static/css/main.7ece5316.chunk.css.map": "./static/css/main.7ece5316.chunk.css.map",
     "static/js/2.87b6ecd1.chunk.js.LICENSE.txt": "./static/js/2.87b6ecd1.chunk.js.LICENSE.txt",
     "static/media/appstore_512.png": "./static/media/appstore_512.ac27f5d8.png",
     "static/media/pdf-download_512.png": "./static/media/pdf-download_512.4b70737e.png",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.efc74ee2.js",
     "static/js/2.87b6ecd1.chunk.js",
-    "static/css/main.23338446.chunk.css",
-    "static/js/main.77c35a53.chunk.js"
+    "static/css/main.7ece5316.chunk.css",
+    "static/js/main.ae7a039d.chunk.js"
   ]
 }

@@ -1,21 +1,10 @@
-import childProcess from 'child_process';
 import { PathMap } from '../pathMap';
+import { Utils } from '../utils/utils';
 
 export module Build {
-  function buildReact(): Promise<void> {
-    return new Promise((resolve, reject) => {
-      childProcess.exec(`cd ${PathMap.clientPath} && yarn && yarn run build`, (error, stdout, stderr) => {
-        if (error) {
-          reject(error);
-        }
-
-        if (stderr) {
-          reject(stderr);
-        }
-
-        resolve();
-      });
-    });
+  async function buildReact(): Promise<void> {
+    await Utils.exec(`cd ${PathMap.clientPath} && yarn`);
+    await Utils.exec(`cd ${PathMap.clientPath} && yarn run build`);
   }
 
   export async function run() {

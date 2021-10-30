@@ -12,6 +12,7 @@ interface IconResources {
     linkedin: any;
     playstore: any;
     appstore: any;
+    pdf: any;
     url: any;
   };
 }
@@ -28,6 +29,7 @@ function makeResources() {
       linkedin: require('./icons/linkedin_512.png').default,
       playstore: require('./icons/playstore_512.png').default,
       appstore: require('./icons/appstore_512.png').default,
+      pdf: require('./icons/pdf-download_512.png').default,
       url: require('./icons/url.png').default
     }
   };

@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   pull_request:
     branches: [master]
-  push:
-    branches: [master]
 
 jobs:
   deploy:
@@ -42,7 +40,8 @@ jobs:
         run: |
           git config --global user.name 'lumyjuwon'
           git config --global user.email 'lumyjuwon@gmail.com'
-          git commit -am "Deploy Resume"
+          git commit -am "Deploy resume"
+
       - name: Push
         run: |
           git push

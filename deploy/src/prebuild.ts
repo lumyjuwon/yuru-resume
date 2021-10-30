@@ -47,13 +47,16 @@ export module Prebuild {
   }
 
   async function applyResumeConfig() {
-    const resumes = await fs.readdir(`${PathMap.userPath}/resume`);
+    const resumes = await fs.readdir(`${PathMap.userPath}/resumes`);
 
-    const destinationResumePath = `${PathMap.clientPath}/src/resources/resume`;
+    const destinationResumePath = `${PathMap.clientPath}/src/resources/resumes`;
 
     resumes.forEach(
       async (resume) =>
-        await fs.writeFile(`${destinationResumePath}/${resume}`, resume)
+        await fs.writeFile(
+          `${destinationResumePath}/${resume}`,
+          await fs.readFile(`${PathMap.userPath}/resumes/${resume}`)
+        )
     );
   }
 

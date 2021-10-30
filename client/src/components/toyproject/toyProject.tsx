@@ -11,7 +11,7 @@ export function ToyProject() {
     <Container>
       <h3>Toy Project</h3>
       {projects.map((project) => {
-        return <Project project={project} />;
+        return <Project key={project.name} project={project} />;
       })}
     </Container>
   );

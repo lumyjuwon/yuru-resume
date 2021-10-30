@@ -11,18 +11,16 @@ export function Experience() {
     <Container>
       <h3>Work Experience</h3>
       {Resources.resume.experiences.map((experience) => (
-        <>
-          <CompanyInfo
-            key={experience.company}
-            companyName={experience.company}
-            startDate={new Date(experience.startDate)}
-            endDate={experience.endDate ? new Date(experience.endDate) : undefined}
-          >
-            {experience.projects.map((project: IProject) => {
-              return <Project key={project.name} project={project} />;
-            })}
-          </CompanyInfo>
-        </>
+        <CompanyInfo
+          key={experience.company}
+          companyName={experience.company}
+          startDate={new Date(experience.startDate)}
+          endDate={experience.endDate ? new Date(experience.endDate) : undefined}
+        >
+          {experience.projects.map((project: IProject) => {
+            return <Project key={project.name} project={project} />;
+          })}
+        </CompanyInfo>
       ))}
     </Container>
   );

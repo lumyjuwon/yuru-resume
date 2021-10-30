@@ -36,12 +36,12 @@ export function Skills(props: Props) {
     <Container>
       <h3>Main Skills</h3>
       {Object.keys(Resources.resume.skills.main).map((title) => (
-        <SkillDescription title={title} description={Resources.resume.skills.main[title]} />
+        <SkillDescription key={title} title={title} description={Resources.resume.skills.main[title]} />
       ))}
 
       <h3>Additional Skills</h3>
       {Object.keys(Resources.resume.skills.additional).map((title) => (
-        <SkillDescription title={title} description={Resources.resume.skills.additional[title]} />
+        <SkillDescription key={title} title={title} description={Resources.resume.skills.additional[title]} />
       ))}
     </Container>
   );

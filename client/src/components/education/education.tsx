@@ -25,7 +25,7 @@ export function Education() {
     <Container>
       <h3>Education</h3>
       {Resources.resume.educations.map((education) => (
-        <div>
+        <div key={education.title}>
           <UniversityName>{education.title}</UniversityName>
           <UniversityDate>{education.period}</UniversityDate>
         </div>

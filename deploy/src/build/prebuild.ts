@@ -1,6 +1,7 @@
-import path from "path";
-import { promises as fs } from "fs";
-import { PathMap } from "./pathMap";
+import path from 'path';
+import { promises as fs } from 'fs';
+
+import { PathMap } from '../pathMap';
 
 export module Prebuild {
   async function applyPageConfig() {
@@ -18,29 +19,23 @@ export module Prebuild {
 
     const page = require(`${PathMap.userPath}/page.json`);
 
-    const indexHtmlPath = path.resolve(
-      PathMap.clientPath,
-      "./public/index.html"
-    );
+    const indexHtmlPath = path.resolve(PathMap.clientPath, './public/index.html');
     const indexHtml = (await fs.readFile(indexHtmlPath)).toString();
 
     const searchPair = [
       {
         targetRegex: /<title>.+<\/title>/,
-        replacedText: `<title>${page.title}</title>`,
+        replacedText: `<title>${page.title}</title>`
       },
       {
         targetRegex: /      content=".+"/,
-        replacedText: `      content="${page.description}"`,
-      },
+        replacedText: `      content="${page.description}"`
+      }
     ];
     let replacedIndexHtml = indexHtml;
     for (const searh of searchPair) {
       const replaceTarget = searchTarget(indexHtml, searh.targetRegex);
-      replacedIndexHtml = replacedIndexHtml.replace(
-        replaceTarget,
-        searh.replacedText
-      );
+      replacedIndexHtml = replacedIndexHtml.replace(replaceTarget, searh.replacedText);
     }
 
     await fs.writeFile(indexHtmlPath, replacedIndexHtml);
@@ -52,20 +47,16 @@ export module Prebuild {
     const destinationResumePath = `${PathMap.clientPath}/src/resources/resumes`;
 
     resumes.forEach(
-      async (resume) =>
-        await fs.writeFile(
-          `${destinationResumePath}/${resume}`,
-          await fs.readFile(`${PathMap.userPath}/resumes/${resume}`)
-        )
+      async (resume) => await fs.writeFile(`${destinationResumePath}/${resume}`, await fs.readFile(`${PathMap.userPath}/resumes/${resume}`))
     );
   }
 
   export async function run() {
-    console.log("Running Prebuild");
+    console.log('Running Prebuild');
 
     const applies = [applyPageConfig(), applyResumeConfig()];
     await Promise.all(applies);
 
-    console.log("Complete Prebuild");
+    console.log('Complete Prebuild');
   }
 }

@@ -1,3 +1,8 @@
+export interface IResumeConfig {
+  filenames: string[];
+  default: string;
+}
+
 export interface IProfile {
   name: string;
   email: string;

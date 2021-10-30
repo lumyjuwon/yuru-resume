@@ -6,11 +6,15 @@ import { IProject } from '../../resources/resumes/type';
 
 const Container = styled.div({});
 
-export function Experience() {
+interface Props {
+  lang: string;
+}
+
+export function Experience({ lang }: Props) {
   return (
     <Container>
       <h3>Work Experience</h3>
-      {Resources.resume.experiences.map((experience) => (
+      {Resources.resumeResources[`resume-${lang}`].experiences.map((experience) => (
         <CompanyInfo
           key={experience.company}
           companyName={experience.company}

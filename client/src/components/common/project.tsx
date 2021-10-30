@@ -49,13 +49,13 @@ function ProjectInfo(props: { title: string; description: string; period: string
   function UrlIcon(urlIconProps: { url: string }) {
     let icon;
     if (urlIconProps.url.includes('google')) {
-      icon = Resources.icons.playstore;
+      icon = Resources.iconResources.icons.playstore;
     } else if (urlIconProps.url.includes('apple')) {
-      icon = Resources.icons.appstore;
+      icon = Resources.iconResources.icons.appstore;
     } else if (urlIconProps.url.includes('github.com')) {
-      icon = Resources.icons.github;
+      icon = Resources.iconResources.icons.github;
     } else {
-      icon = Resources.icons.url;
+      icon = Resources.iconResources.icons.url;
     }
 
     return (

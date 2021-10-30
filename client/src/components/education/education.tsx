@@ -20,11 +20,15 @@ const UniversityDate = styled.span({
   }
 });
 
-export function Education() {
+interface Props {
+  lang: string;
+}
+
+export function Education({ lang }: Props) {
   return (
     <Container>
       <h3>Education</h3>
-      {Resources.resume.educations.map((education) => (
+      {Resources.resumeResources[`resume-${lang}`].educations.map((education) => (
         <div key={education.title}>
           <UniversityName>{education.title}</UniversityName>
           <UniversityDate>{education.period}</UniversityDate>

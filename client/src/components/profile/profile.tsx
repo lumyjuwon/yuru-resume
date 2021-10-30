@@ -46,30 +46,34 @@ const Context = styled.span({
   fontSize: '14px'
 });
 
-export function Profile() {
+interface Props {
+  lang: string;
+}
+
+export function Profile({ lang }: Props) {
   return (
     <Container>
-      <h3>{Resources.resume.profile.name}</h3>
+      <h3>{Resources.resumeResources[`resume-${lang}`].profile.name}</h3>
       <IconInfo
-        src={Resources.icons.gmail}
+        src={Resources.iconResources.icons.gmail}
         alt={'GmailIcon'}
-        href={`mailto:${Resources.resume.profile.email}`}
-        info={Resources.resume.profile.email}
+        href={`mailto:${Resources.resumeResources[`resume-${lang}`].profile.email}`}
+        info={Resources.resumeResources[`resume-${lang}`].profile.email}
       />
       <IconInfo
-        src={Resources.icons.github}
+        src={Resources.iconResources.icons.github}
         alt={'GithubIcon'}
-        href={Resources.resume.profile.github}
-        info={Resources.resume.profile.github}
+        href={Resources.resumeResources[`resume-${lang}`].profile.github}
+        info={Resources.resumeResources[`resume-${lang}`].profile.github}
       />
       <IconInfo
-        src={Resources.icons.linkedin}
+        src={Resources.iconResources.icons.linkedin}
         alt={'LinkedInIcon'}
-        href={Resources.resume.profile.linkedin}
-        info={Resources.resume.profile.linkedin}
+        href={Resources.resumeResources[`resume-${lang}`].profile.linkedin}
+        info={Resources.resumeResources[`resume-${lang}`].profile.linkedin}
       />
       <h3>About</h3>
-      <Context>{Resources.resume.profile.about}</Context>
+      <Context>{Resources.resumeResources[`resume-${lang}`].profile.about}</Context>
     </Container>
   );
 }

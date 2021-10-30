@@ -1,0 +1,7 @@
+{
+  "filenames": [
+    "resume-en.json",
+    "resume-ko.json"
+  ],
+  "default": "resume-ko.json"
+}

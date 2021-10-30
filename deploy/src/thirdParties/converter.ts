@@ -18,6 +18,7 @@ export module Converter {
 
     await page.goto(`file:${options.htmlPath}`);
     await page.pdf({
+      printBackground: true,
       path: options.outputPath,
       format: options.format
     });

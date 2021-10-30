@@ -33,11 +33,11 @@ import { Converter } from './src/thirdParties/converter';
 
   for (const resumeFileName of resumeFileNames) {
     await Converter.pdf({
-      outputPath: `${PathMap.root}${User.config.setting.pdf.outputPath}${resumeFileName}.pdf`,
+      outputPath: `${PathMap.root}${User.config.setting.pdf.outputPath}/${resumeFileName}.pdf`,
       format: User.config.setting.pdf.format
     });
     await Converter.image({
-      outputPath: `${PathMap.root}${User.config.setting.image.outputPath}${resumeFileName}.png`
+      outputPath: `${PathMap.root}${User.config.setting.image.outputPath}/${resumeFileName}.png`
     });
   }
 

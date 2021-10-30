@@ -4,10 +4,10 @@
     "htmlPath": "/sample/index.html"
   },
   "pdf": {
-    "outputPath": "/sample/files/",
+    "outputPath": "/sample/files",
     "format": "a2"
   },
   "image": {
-    "outputPath": "/sample/files/"
+    "outputPath": "/sample/files"
   }
 }

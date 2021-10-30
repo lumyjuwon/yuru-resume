@@ -1,6 +1,18 @@
 import { IResume } from './resume/type';
 
-export const Resources = {
+interface IResources {
+  icons: {
+    github: any;
+    gmail: any;
+    linkedin: any;
+    playstore: any;
+    appstore: any;
+    url: any;
+  };
+  [filename: string]: any;
+}
+
+export const Resources: IResources = {
   icons: {
     gmail: require('./icons/gmail_512.png').default,
     github: require('./icons/github_512.png').default,
@@ -9,5 +21,6 @@ export const Resources = {
     appstore: require('./icons/appstore_512.png').default,
     url: require('./icons/url.png').default
   },
-  resume: require('./resume/resume.json') as IResume
+  'resume-en': require('./resume/resume-en.json') as IResume,
+  'resume-ko': require('./resume/resume-ko.json') as IResume
 };

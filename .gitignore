@@ -4,10 +4,10 @@
 /deploy/node_modules
 
 # resume
-/resume/node_modules
-/resume/.pnp
-/resume.pnp.js
-/resume/build
+/client/node_modules
+/client/.pnp
+/client.pnp.js
+/client/build
 
 # utils
 utils/node_modules

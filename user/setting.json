@@ -1,10 +1,13 @@
 {
   "build": {
-    "pagePath": "/sample"
+    "pagePath": "/sample",
+    "htmlPath": "/sample/index.html"
   },
   "pdf": {
-    "htmlPath": "/sample/index.html",
-    "outputPath": "/sample/files/pdf.pdf",
+    "outputPath": "/sample/files/",
     "format": "a2"
+  },
+  "image": {
+    "outputPath": "/sample/files/"
   }
 }

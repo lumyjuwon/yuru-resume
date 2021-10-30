@@ -3,7 +3,19 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export module Converter {
-  export async function pdf(options: { htmlPath: string; outputPath: string; format: PaperFormat }) {
+  let browser: puppeteer.Browser;
+  let htmlPath: string;
+
+  export async function load(_htmlPath: string) {
+    browser = await puppeteer.launch();
+    htmlPath = _htmlPath;
+  }
+
+  export async function close() {
+    await browser.close();
+  }
+
+  export async function pdf(options: { outputPath: string; format: PaperFormat }) {
     console.log('Running Converting html to pdf');
 
     const outputDirPath = path.dirname(options.outputPath);
@@ -13,18 +25,33 @@ export module Converter {
       await fs.mkdir(outputDirPath, { recursive: true });
     }
 
-    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto(`file:${options.htmlPath}`);
+    await page.goto(`file:${htmlPath}`);
     await page.pdf({
       printBackground: true,
       path: options.outputPath,
       format: options.format
     });
 
-    await browser.close();
-
     console.log('Complete Converting html to pdf');
+  }
+
+  export async function image(options: { outputPath: string }) {
+    console.log('Running Converting html to image');
+
+    const outputDirPath = path.dirname(options.outputPath);
+    try {
+      await fs.access(outputDirPath);
+    } catch (error) {
+      await fs.mkdir(outputDirPath, { recursive: true });
+    }
+
+    const page = await browser.newPage();
+
+    await page.goto(`file:${htmlPath}`);
+    await page.screenshot({ path: options.outputPath });
+
+    console.log('Complete Converting html to image');
   }
 }

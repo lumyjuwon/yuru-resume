@@ -1,8 +1,10 @@
+import path from 'path';
+
 import { Build } from './src/build/build';
 import { Afterbuild } from './src/build/afterbuild';
 import { Prebuild } from './src/build/prebuild';
 import { Args } from './src/args';
-import { User } from './src/config';
+import { User } from './src/user';
 import { PathMap, validatePathMap } from './src/pathMap';
 import { Converter } from './src/thirdParties/converter';
 
@@ -22,9 +24,22 @@ import { Converter } from './src/thirdParties/converter';
     pagePath: User.config.setting.build.pagePath
   });
 
-  await Converter.pdf({
-    htmlPath: `${PathMap.root}${User.config.setting.pdf.htmlPath}`,
-    outputPath: `${PathMap.root}${User.config.setting.pdf.outputPath}`,
-    format: User.config.setting.pdf.format
+  const htmlPath = `${PathMap.root}${User.config.setting.build.htmlPath}`;
+  const resumeFileNames = User.config.resumes['resume-config'].filenames.map((fileName: string) => {
+    const extname = path.extname(fileName);
+    return fileName.replace(extname, '');
   });
+  await Converter.load(htmlPath);
+
+  for (const resumeFileName of resumeFileNames) {
+    await Converter.pdf({
+      outputPath: `${PathMap.root}${User.config.setting.pdf.outputPath}${resumeFileName}.pdf`,
+      format: User.config.setting.pdf.format
+    });
+    await Converter.image({
+      outputPath: `${PathMap.root}${User.config.setting.image.outputPath}${resumeFileName}.png`
+    });
+  }
+
+  await Converter.close();
 })();

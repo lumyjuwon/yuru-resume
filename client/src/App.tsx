@@ -5,6 +5,7 @@ import { Profile, Experience, Education, Skills, ToyProject } from './components
 import { changeLang, langCodes } from './resources/lang';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import { ToolHeader } from './components/common/toolHeader';
 
 const Container = styled.div({
   width: '52%',
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <Container>
+      <ToolHeader />
       <div>
         <ul>
           {Object.keys(langCodes).map((code) => (

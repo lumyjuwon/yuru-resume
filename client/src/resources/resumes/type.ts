@@ -1,5 +1,11 @@
 export interface IResumeConfig {
   filenames: string[];
+  downloadFiles: {
+    [lang: string]: {
+      png: string;
+      pdf: string;
+    };
+  };
   default: string;
 }
 

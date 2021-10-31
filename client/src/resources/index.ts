@@ -1,20 +1,14 @@
+import { Icons } from './icons/type';
 import { IResumeConfig } from './resumes/type';
 
 const resumeConfig: IResumeConfig = require('./resumes/resume-config.json');
 
 export const resumeFilenames = resumeConfig.filenames;
+export const resumeDownloadFiles = resumeConfig.downloadFiles;
 export const defaultResume = resumeConfig.default;
 
 interface IResources {
-  icons: {
-    gmail: any;
-    github: any;
-    linkedin: any;
-    playstore: any;
-    appstore: any;
-    pdf: any;
-    url: any;
-  };
+  icons: Icons;
 }
 
 export const Resources: IResources = {

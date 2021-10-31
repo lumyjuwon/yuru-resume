@@ -1,6 +1,1 @@
-{
-  "filenames": [
-    "en.json",
-    "ko.json"
-  ]
-}
+{"filenames":["en.json","ko.json"],"downloadFiles":{"en":{"png":"https://github.com/lumyjuwon/lumy-resume/raw/master/sample/files/en.png","pdf":"https://github.com/lumyjuwon/lumy-resume/raw/master/sample/files/en.pdf"},"ko":{"png":"https://github.com/lumyjuwon/lumy-resume/raw/master/sample/files/ko.png","pdf":"https://github.com/lumyjuwon/lumy-resume/raw/master/sample/files/ko.pdf"}}}

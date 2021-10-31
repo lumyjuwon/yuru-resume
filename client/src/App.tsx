@@ -21,16 +21,25 @@ const Border = styled.div({
   margin: '24px 0 6px 0'
 });
 
+function parseSearchParams(search: string) {
+  const params: { [key: string]: any } = {};
+
+  const searchParams = search.substr(1).split('&');
+  for (const searchParam of searchParams) {
+    const [key, value] = searchParam.split('=');
+    params[key] = value;
+  }
+
+  return params;
+}
+
 function App() {
-  const pathname = document.location.pathname;
+  const searchParams = parseSearchParams(document.location.search);
+  useTranslation();
 
   useEffect(() => {
-    if (pathname !== '/') {
-      changeLang(pathname.replace('/', ''));
-    }
-  }, [pathname]);
-
-  useTranslation();
+    changeLang(searchParams['lang']);
+  }, []);
 
   return (
     <Container>

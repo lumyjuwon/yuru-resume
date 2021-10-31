@@ -47,7 +47,12 @@ function trans(key: string) {
 }
 
 function changeLang(code: string) {
-  i18n.changeLanguage(code);
+  if (langCodes[code]) {
+    i18n.changeLanguage(code);
+  } else {
+    const firstLangCode = Object.keys(langCodes)[0];
+    i18n.changeLanguage(firstLangCode);
+  }
 }
 
 export { i18n, langCodes, languages, getCurrentLanguage, trans, changeLang };

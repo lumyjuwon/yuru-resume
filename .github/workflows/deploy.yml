@@ -31,7 +31,7 @@ jobs:
 
       - name: Install deploy dependencies
         working-directory: deploy
-        run: npm install
+        run: yarn install
 
       - name: Deploy resume
         working-directory: deploy

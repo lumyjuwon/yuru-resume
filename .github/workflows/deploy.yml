@@ -40,7 +40,8 @@ jobs:
         run: |
           git config --global user.name 'lumyjuwon'
           git config --global user.email 'lumyjuwon@gmail.com'
-          git commit -am "Deploy resume"
+          git add -A
+          git commit -m "Deploy resume"
 
       - name: Push
         run: |

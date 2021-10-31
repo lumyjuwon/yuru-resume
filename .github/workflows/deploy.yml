@@ -26,7 +26,7 @@ jobs:
         run: npm install -g yarn
 
       - name: Install resume dependencies
-        working-directory: resume
+        working-directory: client
         run: yarn install
 
       - name: Install deploy dependencies

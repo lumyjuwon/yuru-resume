@@ -1,4 +1,8 @@
 {
+  "host": {
+    "url": "https://github.com/lumyjuwon/lumy-resume",
+    "branch": "master"
+  },
   "build": {
     "pagePath": "/sample",
     "htmlPath": "/sample/index.html"

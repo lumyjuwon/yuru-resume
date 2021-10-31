@@ -2,6 +2,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 
 import { PathMap } from '../pathMap';
+import { User } from '../user';
 
 export module Prebuild {
   async function applyPageConfig() {
@@ -19,8 +20,8 @@ export module Prebuild {
 
     const page = require(`${PathMap.userPath}/page.json`);
 
-    const indexHtmlPath = path.resolve(PathMap.clientPath, './public/index.html');
-    const indexHtml = (await fs.readFile(indexHtmlPath)).toString();
+    const destIndexHtmlPath = path.resolve(PathMap.clientPath, './public/index.html');
+    const indexHtml = (await fs.readFile(destIndexHtmlPath)).toString();
 
     const searchPair = [
       {
@@ -38,17 +39,41 @@ export module Prebuild {
       replacedIndexHtml = replacedIndexHtml.replace(replaceTarget, searh.replacedText);
     }
 
-    await fs.writeFile(indexHtmlPath, replacedIndexHtml);
+    await fs.writeFile(destIndexHtmlPath, replacedIndexHtml);
   }
 
   async function applyResumeConfig() {
-    const resumes = await fs.readdir(`${PathMap.userPath}/resumes`);
+    const resumeNames = await fs.readdir(`${PathMap.userPath}/resumes`);
 
-    const destinationResumePath = `${PathMap.clientPath}/src/resources/resumes`;
+    for (const resumeName of resumeNames) {
+      const sourceResumePath = `${PathMap.userPath}/resumes/${resumeName}`;
+      const destResumePath = `${PathMap.clientPath}/src/resources/resumes/${resumeName}`;
+      let source;
 
-    resumes.forEach(
-      async (resume) => await fs.writeFile(`${destinationResumePath}/${resume}`, await fs.readFile(`${PathMap.userPath}/resumes/${resume}`))
-    );
+      if (resumeName.includes('resume-config.json')) {
+        const resumeConfig = require(sourceResumePath);
+        const langs = resumeConfig['filenames'].map((fileName: string) => {
+          return fileName.replace('.json', '');
+        });
+
+        resumeConfig['downloadFiles'] = {};
+
+        const setting = User.config.setting;
+        const downloadUrl = `${setting.host.url}/raw/${setting.host.branch}`;
+        for (const lang of langs) {
+          resumeConfig['downloadFiles'][lang] = {
+            png: `${downloadUrl}${setting.image.outputPath}/${lang}.png`,
+            pdf: `${downloadUrl}${setting.pdf.outputPath}/${lang}.pdf`
+          };
+        }
+
+        source = JSON.stringify(resumeConfig);
+      } else {
+        source = await fs.readFile(sourceResumePath);
+      }
+
+      await fs.writeFile(destResumePath, source);
+    }
   }
 
   export async function run() {

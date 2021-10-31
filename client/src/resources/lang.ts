@@ -18,9 +18,10 @@ const langCodes: LangCodes = {};
 const languages: Languages = {};
 
 resumeFilenames.forEach((filename) => {
-  const code = filename.replace('resume-', '').replace('.json', '');
-  langCodes[code] = code;
-  languages[code] = { translation: require(`./resumes/${filename}`) };
+  console.log(filename);
+  const code = filename.replace('.json', '');
+  langCodes[code.substring(0, 2)] = code;
+  languages[code.substring(0, 2)] = { translation: require(`./resumes/${filename}`) };
 });
 
 const options: DetectorOptions = {

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import { useLocation, withRouter, BrowserRouter } from 'react-router-dom';
 
 import { Profile, Experience, Education, Skills, ToyProject } from './components';
 import { changeLang, langCodes } from './resources/lang';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const Container = styled.div({
   width: '52%',
@@ -20,15 +21,14 @@ const Border = styled.div({
 });
 
 function App() {
-  // 기본 도메인일 시:
-  //   기본 언어 디텍
-  //   컴포넌트 -> i18n -> 리소스
-  //   기본 언어 -> 영어 -> 맨 위 레쥬메
+  const pathname = document.location.pathname;
 
-  //   언어 버튼 -> translate
+  useEffect(() => {
+    if (pathname !== '/') {
+      changeLang(pathname.replace('/', ''));
+    }
+  }, [pathname]);
 
-  // 아닐 시:
-  //   url parsing -> 언어 translate
   useTranslation();
 
   return (

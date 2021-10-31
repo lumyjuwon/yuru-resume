@@ -1,7 +1,6 @@
 {
   "filenames": [
-    "resume-en.json",
-    "resume-ko.json"
-  ],
-  "default": "resume-ko.json"
+    "en-us.json",
+    "ko-kr.json"
+  ]
 }

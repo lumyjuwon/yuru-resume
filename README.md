@@ -13,8 +13,8 @@ https://lumyjuwon.github.io/lumy-resume/sample/
 2. customize your resume
 
 - Write resume in `lumy-resume/user/resume` directory
-- **MUST USE ISO 639-1 Code** for resume filename
-- ex) `resume-en.json`, `resume-ko.json`, `resume-ja.json`
+- **MUST USE ISO 639-1 Code and Country Codes Alpha-2** for resume filename
+- ex) `ko-kr.json`, `en-us.json`, `ja-jp.json`
 
 3. deploy the resume
 

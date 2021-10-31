@@ -70,6 +70,5 @@ export module User {
 
   export async function load() {
     await mergeConfig(config, PathMap.userPath);
-    console.log(config);
   }
 }

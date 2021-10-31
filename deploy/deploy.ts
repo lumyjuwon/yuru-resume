@@ -18,12 +18,14 @@ import { Converter } from './src/thirdParties/converter';
     return;
   }
 
+  // Build
   await Prebuild.run();
   await Build.run();
   await Afterbuild.run({
     pagePath: User.config.setting.build.pagePath
   });
 
+  // Convert
   const htmlPath = `${PathMap.root}${User.config.setting.build.htmlPath}`;
   const resumeFileNames = User.config.resumes['resume-config'].filenames.map((fileName: string) => {
     const extname = path.extname(fileName);
@@ -32,11 +34,14 @@ import { Converter } from './src/thirdParties/converter';
   await Converter.load(htmlPath);
 
   for (const resumeFileName of resumeFileNames) {
+    const lang = resumeFileName.replace('.json', '');
     await Converter.pdf({
+      lang: lang,
       outputPath: `${PathMap.root}${User.config.setting.pdf.outputPath}/${resumeFileName}.pdf`,
       format: User.config.setting.pdf.format
     });
     await Converter.image({
+      lang: lang,
       outputPath: `${PathMap.root}${User.config.setting.image.outputPath}/${resumeFileName}.png`
     });
   }

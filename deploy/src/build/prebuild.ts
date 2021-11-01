@@ -4,6 +4,8 @@ import { promises as fs } from 'fs';
 import { PathMap } from '../pathMap';
 import { User } from '../user';
 
+type ResumeConfig = { filenames: string[]; downloadFiles: { [lang: string]: { png: string; pdf: string } } };
+
 export module Prebuild {
   async function applyPageConfig() {
     function searchTarget(target: string, regex: RegExp): string {
@@ -45,33 +47,34 @@ export module Prebuild {
   async function applyResumeConfig() {
     const resumeNames = await fs.readdir(`${PathMap.userPath}/resumes`);
 
+    // Create resume-config.json
+    const resumeConfig: ResumeConfig = {
+      filenames: resumeNames,
+      downloadFiles: {}
+    };
+
+    const langs = resumeNames.map((fileName: string) => {
+      return fileName.replace('.json', '');
+    });
+
+    const setting = User.config.setting;
+    const downloadUrl = `${setting.host.url}/raw/${setting.host.branch}`;
+    for (const lang of langs) {
+      resumeConfig['downloadFiles'][lang] = {
+        png: `${downloadUrl}${setting.image.outputPath}/${lang}.png`,
+        pdf: `${downloadUrl}${setting.pdf.outputPath}/${lang}.pdf`
+      };
+    }
+
+    const destResumeConfigPath = `${PathMap.clientPath}/src/resources/resumes/resume-config.json`;
+    await fs.writeFile(destResumeConfigPath, JSON.stringify(resumeConfig));
+
     for (const resumeName of resumeNames) {
       const sourceResumePath = `${PathMap.userPath}/resumes/${resumeName}`;
       const destResumePath = `${PathMap.clientPath}/src/resources/resumes/${resumeName}`;
       let source;
 
-      if (resumeName.includes('resume-config.json')) {
-        const resumeConfig = require(sourceResumePath);
-        const langs = resumeConfig['filenames'].map((fileName: string) => {
-          return fileName.replace('.json', '');
-        });
-
-        resumeConfig['downloadFiles'] = {};
-
-        const setting = User.config.setting;
-        const downloadUrl = `${setting.host.url}/raw/${setting.host.branch}`;
-        for (const lang of langs) {
-          resumeConfig['downloadFiles'][lang] = {
-            png: `${downloadUrl}${setting.image.outputPath}/${lang}.png`,
-            pdf: `${downloadUrl}${setting.pdf.outputPath}/${lang}.pdf`
-          };
-        }
-
-        source = JSON.stringify(resumeConfig);
-      } else {
-        source = await fs.readFile(sourceResumePath);
-      }
-
+      source = await fs.readFile(sourceResumePath);
       await fs.writeFile(destResumePath, source);
     }
   }

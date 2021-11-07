@@ -23,9 +23,7 @@ interface Config {
     };
   };
   resumes: {
-    'resume-config': {
-      filenames: string[];
-    };
+    [lang: string]: any;
   };
 }
 
@@ -48,11 +46,7 @@ export module User {
         outputPath: ''
       }
     },
-    resumes: {
-      'resume-config': {
-        filenames: []
-      }
-    }
+    resumes: {}
   };
 
   async function mergeConfig(_config: any, dirPath: string) {

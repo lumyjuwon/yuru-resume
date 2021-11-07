@@ -27,10 +27,11 @@ import { Converter } from './src/thirdParties/converter';
 
   // Convert
   const htmlPath = `${PathMap.root}${User.config.setting.build.htmlPath}`;
-  const resumeFileNames = User.config.resumes['resume-config'].filenames.map((fileName: string) => {
+  const resumeFileNames = Object.keys(User.config.resumes).map((fileName: string) => {
     const extname = path.extname(fileName);
     return fileName.replace(extname, '');
   });
+
   await Converter.load(htmlPath);
 
   for (const resumeFileName of resumeFileNames) {

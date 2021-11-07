@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react';
 import styled from 'styled-components';
 
-import { Resources, resumeDownloadFiles } from '../../resources';
-import { getCurrentLanguage, langCodes, changeLang } from '../../lang';
+import { resources, resumeDownloadFiles } from '../../resources';
+import { getCurrentLangCode, langCodes, changeLangCode } from '../../lang';
 import { FocusWrapper } from './focusWrapper';
 
 interface DownloadHeaderProps {
@@ -11,9 +11,14 @@ interface DownloadHeaderProps {
 
 function DownloadHeader(props: DownloadHeaderProps) {
   return (
-    <a href={resumeDownloadFiles[props.lang].pdf} target='_blank' rel='noreferrer'>
-      <img src={Resources.icons.pdf} width={36} alt={'Icon'} />
-    </a>
+    <div>
+      <a href={resumeDownloadFiles[props.lang].pdf} target='_blank' rel='noreferrer'>
+        <img src={resources.icons.pdf} width={36} alt={'Icon'} />
+      </a>
+      <a href={resumeDownloadFiles[props.lang].png} target='_blank' rel='noreferrer'>
+        <img src={resources.icons.png} width={36} alt={'Icon'} />
+      </a>
+    </div>
   );
 }
 
@@ -51,21 +56,23 @@ const LanguageContainer = styled.ul({
   zIndex: 1
 });
 
-const LanguageItem = styled.li({
+const LanguageItem = styled.li<{ isDefaultValue: boolean }>((props) => ({
   width: '100%',
   padding: '8px',
+  borderRadius: '8px',
   wordBreak: 'break-all',
   textAlign: 'center',
-  borderRadius: '8px',
+  backgroundColor: props.isDefaultValue ? '#ddd' : '',
   '&:hover': {
     backgroundColor: '#ddd',
     cursor: 'pointer'
   }
-});
+}));
 
 function LanguageMenu() {
   const [langMenuOpen, setLangMemuOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+  const currentLangCode = getCurrentLangCode();
 
   function closeLangMenu() {
     setLangMemuOpen(false);
@@ -74,13 +81,20 @@ function LanguageMenu() {
   return (
     <div>
       <Button onClick={() => setLangMemuOpen(true)} isOpen={langMenuOpen}>
-        <span>Languages</span>
+        <span>{currentLangCode}</span>
         <b>&gt;</b>
       </Button>
       <FocusWrapper ref={langRef} visible={langMenuOpen} onClickOutside={closeLangMenu}>
         <LanguageContainer>
           {Object.keys(langCodes).map((code) => (
-            <LanguageItem key={code} onClick={() => changeLang(code)}>
+            <LanguageItem
+              isDefaultValue={currentLangCode === code}
+              key={code}
+              onClick={() => {
+                changeLangCode(code);
+                closeLangMenu();
+              }}
+            >
               {code}
             </LanguageItem>
           ))}
@@ -92,11 +106,12 @@ function LanguageMenu() {
 
 const Container = styled.div({
   display: 'flex',
-  justifyContent: 'flex-end',
+  marginBottom: '36px',
+  justifyContent: 'space-between',
   alignItems: 'center'
 });
 
-export function ToolHeader() {
+export function Header() {
   if (navigator.userAgent === 'Deploy') {
     return null;
   }
@@ -104,7 +119,7 @@ export function ToolHeader() {
   return (
     <Container>
       <LanguageMenu />
-      <DownloadHeader lang={getCurrentLanguage()} />
+      <DownloadHeader lang={getCurrentLangCode()} />
     </Container>
   );
 }

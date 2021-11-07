@@ -5,5 +5,6 @@ export type Icons = {
   playstore: any;
   appstore: any;
   pdf: any;
+  png: any;
   url: any;
 };

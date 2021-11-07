@@ -7,18 +7,19 @@ export const resumeFilenames = resumeConfig.filenames;
 export const resumeDownloadFiles = resumeConfig.downloadFiles;
 export const defaultResume = resumeConfig.default;
 
-interface IResources {
+interface Resources {
   icons: Icons;
 }
 
-export const Resources: IResources = {
+export const resources: Resources = {
   icons: {
-    gmail: require('./icons/gmail_512.png').default,
-    github: require('./icons/github_512.png').default,
-    linkedin: require('./icons/linkedin_512.png').default,
-    playstore: require('./icons/playstore_512.png').default,
-    appstore: require('./icons/appstore_512.png').default,
-    pdf: require('./icons/pdf-download_512.png').default,
+    gmail: require('./icons/gmail.png').default,
+    github: require('./icons/github.png').default,
+    linkedin: require('./icons/linkedin.png').default,
+    playstore: require('./icons/playstore.png').default,
+    appstore: require('./icons/appstore.png').default,
+    pdf: require('./icons/pdf.png').default,
+    png: require('./icons/png.png').default,
     url: require('./icons/url.png').default
   }
 };

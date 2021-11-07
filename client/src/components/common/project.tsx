@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Resources } from '../../resources';
+import { resources } from '../../resources';
 import { IProject } from '../../resources/resumes/type';
 
 const SkillShieldContainer = styled.div({
@@ -49,13 +49,13 @@ function ProjectInfo(props: { title: string; description: string; period: string
   function UrlIcon(urlIconProps: { url: string }) {
     let icon;
     if (urlIconProps.url.includes('google')) {
-      icon = Resources.icons.playstore;
+      icon = resources.icons.playstore;
     } else if (urlIconProps.url.includes('apple')) {
-      icon = Resources.icons.appstore;
+      icon = resources.icons.appstore;
     } else if (urlIconProps.url.includes('github.com')) {
-      icon = Resources.icons.github;
+      icon = resources.icons.github;
     } else {
-      icon = Resources.icons.url;
+      icon = resources.icons.url;
     }
 
     return (

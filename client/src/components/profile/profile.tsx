@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Resources } from '../../resources';
+import { resources } from '../../resources';
 import { trans } from '../../lang';
 
 const IconInfoContainer = styled.div({
@@ -51,9 +51,9 @@ export function Profile() {
   return (
     <Container>
       <h3>{trans('profile.name')}</h3>
-      <IconInfo src={Resources.icons.gmail} alt={'GmailIcon'} href={`mailto:${trans('profile.email')}`} info={trans('profile.email')} />
-      <IconInfo src={Resources.icons.github} alt={'GithubIcon'} href={trans('profile.github')} info={trans('profile.github')} />
-      <IconInfo src={Resources.icons.linkedin} alt={'LinkedInIcon'} href={trans('profile.linkedin')} info={trans('profile.linkedin')} />
+      <IconInfo src={resources.icons.gmail} alt={'GmailIcon'} href={`mailto:${trans('profile.email')}`} info={trans('profile.email')} />
+      <IconInfo src={resources.icons.github} alt={'GithubIcon'} href={trans('profile.github')} info={trans('profile.github')} />
+      <IconInfo src={resources.icons.linkedin} alt={'LinkedInIcon'} href={trans('profile.linkedin')} info={trans('profile.linkedin')} />
       <h3>About</h3>
       <Context>{trans('profile.about')}</Context>
     </Container>

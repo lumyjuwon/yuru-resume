@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
 import { Profile, Experience, Education, Skills, ToyProject } from './components';
-import { ToolHeader } from './components/common/toolHeader';
-import { changeLang } from './lang';
+import { Header } from './components/common/Header';
+import { changeLangCode } from './lang';
 
 const Container = styled.div({
   width: '52%',
@@ -39,13 +39,13 @@ function App() {
 
   useEffect(() => {
     if (searchParams['lang']) {
-      changeLang(searchParams['lang']);
+      changeLangCode(searchParams['lang']);
     }
-  });
+  }, []);
 
   return (
     <Container>
-      <ToolHeader />
+      <Header />
 
       <Profile />
       <Border />

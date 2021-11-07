@@ -7,6 +7,7 @@ export module Args {
       '-prebuild': false
     },
     keyValue: {
+      repo: '',
       branch: ''
     }
   };

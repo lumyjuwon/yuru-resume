@@ -25,7 +25,7 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
 
-      - name: Install resume dependencies
+      - name: Install client dependencies
         working-directory: client
         run: yarn install
 
@@ -35,7 +35,7 @@ jobs:
 
       - name: Deploy resume
         working-directory: deploy
-        run: yarn run deploy branch=$GITHUB_REF
+        run: yarn run deploy repo=$GITHUB_SERVER_URL$GITHUB_REPOSITORY branch=$GITHUB_REF
 
       - name: Commit
         run: |

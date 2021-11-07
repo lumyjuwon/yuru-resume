@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import styled from 'styled-components';
 
 import { Resources, resumeDownloadFiles } from '../../resources';
-import { getCurrentLanguage, langCodes, changeLang } from '../../resources/lang';
+import { getCurrentLanguage, langCodes, changeLang } from '../../lang';
 import { FocusWrapper } from './focusWrapper';
 
 interface DownloadHeaderProps {

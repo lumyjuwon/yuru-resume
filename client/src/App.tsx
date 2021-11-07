@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { Profile, Experience, Education, Skills, ToyProject } from './components';
-import { changeLang } from './resources/lang';
+import { changeLang } from './lang';
 import { useTranslation } from 'react-i18next';
 import { ToolHeader } from './components/common/toolHeader';
 

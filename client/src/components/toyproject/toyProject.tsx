@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Project } from '../common/project';
-import { trans } from '../../resources/lang';
+import { trans } from '../../lang';
 import { IProject } from '../../resources/resumes/type';
 
 const Container = styled.div({});

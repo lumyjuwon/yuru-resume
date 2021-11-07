@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { trans } from '../../resources/lang';
+import { trans } from '../../lang';
 
 const SkillDescriptionContainer = styled.div({
   marginTop: '8px'

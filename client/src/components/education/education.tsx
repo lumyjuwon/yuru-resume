@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { trans } from '../../resources/lang';
+import { trans } from '../../lang';
 import { IEducation } from '../../resources/resumes/type';
 
 const Container = styled.div({

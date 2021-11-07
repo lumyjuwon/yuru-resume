@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Resources } from '../../resources';
-import { trans } from '../../resources/lang';
+import { trans } from '../../lang';
 
 const IconInfoContainer = styled.div({
   display: 'flex',

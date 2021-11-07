@@ -43,7 +43,8 @@ import { Converter } from './src/thirdParties/converter';
     });
     await Converter.image({
       lang: lang,
-      outputPath: `${PathMap.root}${User.config.setting.image.outputPath}/${resumeFileName}.png`
+      outputPath: `${PathMap.root}${User.config.setting.image.outputPath}/${resumeFileName}.png`,
+      type: 'png'
     });
   }
 

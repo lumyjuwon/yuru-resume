@@ -13,8 +13,8 @@ export module Converter {
     page = await browser.newPage();
     await page.setUserAgent('Deploy');
     await page.setViewport({
-      width: 1920,
-      height: 1080
+      width: 3840,
+      height: 2160
     });
   }
 
@@ -46,7 +46,7 @@ export module Converter {
     console.log('Complete Converting html to pdf');
   }
 
-  export async function image(options: { lang: string; outputPath: string }) {
+  export async function image(options: { lang: string; outputPath: string; type: 'png' | 'jpeg' | 'webp' }) {
     console.log('Running Converting html to image');
 
     const outputDirPath = path.dirname(options.outputPath);
@@ -61,7 +61,7 @@ export module Converter {
       localStorage.setItem('i18nextLng', lang);
     }, options.lang);
     await page.reload();
-    await page.screenshot({ type: 'png', path: options.outputPath, fullPage: true });
+    await page.screenshot({ type: options.type, path: options.outputPath, fullPage: true });
 
     console.log('Complete Converting html to image');
   }

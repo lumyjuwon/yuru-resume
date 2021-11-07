@@ -2,7 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Detector, { DetectorOptions } from 'i18next-browser-languagedetector';
 
-import { resumeFilenames } from '.';
+import { resumeFilenames } from '../resources';
 
 interface Languages {
   [code: string]: {
@@ -17,11 +17,13 @@ interface LangCodes {
 const langCodes: LangCodes = {};
 const languages: Languages = {};
 
-resumeFilenames.forEach((filename) => {
-  const code = filename.replace('.json', '');
+for (const resumeFilename of resumeFilenames) {
+  const code = resumeFilename.replace('.json', '');
   langCodes[code] = code;
-  languages[code] = { translation: require(`./resumes/${filename}`) };
-});
+  languages[code] = { translation: require(`../resources/resumes/${resumeFilename}`) };
+}
+
+const defaultLangCode = Object.keys(langCodes)[0];
 
 const options: DetectorOptions = {
   order: ['querystring', 'navigator'],
@@ -30,13 +32,10 @@ const options: DetectorOptions = {
 const detector = new Detector();
 detector.init(options);
 
-i18n
-  .use(detector)
-  .use(initReactI18next)
-  .init({
-    resources: languages,
-    fallbackLng: languages[Object.keys(languages)[0]]
-  });
+i18n.use(detector).use(initReactI18next).init({
+  resources: languages,
+  fallbackLng: languages[defaultLangCode]
+});
 
 function getCurrentLanguage() {
   return i18n.language;
@@ -50,8 +49,7 @@ function changeLang(code: string) {
   if (langCodes[code]) {
     i18n.changeLanguage(code);
   } else {
-    const firstLangCode = Object.keys(langCodes)[0];
-    i18n.changeLanguage(firstLangCode);
+    i18n.changeLanguage(defaultLangCode);
   }
 }
 

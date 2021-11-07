@@ -35,12 +35,11 @@ jobs:
 
       - name: Deploy resume
         working-directory: deploy
-        run: yarn run deploy repo=$GITHUB_SERVER_URL$GITHUB_REPOSITORY branch=$GITHUB_REF
+        run: yarn run deploy repo_url=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY branch=$GITHUB_REF
 
       - name: Commit
         run: |
-          git config --global user.name 'lumyjuwon'
-          git config --global user.email 'lumyjuwon@gmail.com'
+          git config --global user.name $GITHUB_ACTOR
           git add -A
           git commit -m "Deploy resume"
 

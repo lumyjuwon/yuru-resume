@@ -13,7 +13,8 @@ import { Converter } from './src/thirdParties/converter';
   await validatePathMap();
   await User.load();
 
-  const prebuildOptions = {
+  const prebuildOptions: Prebuild.Options = {
+    repo_url: args.keyValue.repo_url,
     branch: args.keyValue.branch
   };
 

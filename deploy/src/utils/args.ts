@@ -7,7 +7,7 @@ export module Args {
       '-prebuild': false
     },
     keyValue: {
-      repo: '',
+      repo_url: '',
       branch: ''
     }
   };
@@ -18,6 +18,10 @@ export module Args {
         throw new Error(`${keyValueKey} should be initilized`);
       }
     }
+  }
+
+  function parse() {
+    args.keyValue.branch = args.keyValue.branch.replace('refs/heads/', '');
   }
 
   export function parseArgs(argv: string[]) {
@@ -39,6 +43,7 @@ export module Args {
     }
 
     validateArgs();
+    parse();
 
     return args;
   }

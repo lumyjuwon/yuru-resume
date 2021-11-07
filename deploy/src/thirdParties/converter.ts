@@ -2,13 +2,16 @@ import puppeteer, { PaperFormat } from 'puppeteer';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+import { User } from '../user';
+import { PathMap } from '../pathMap';
+
 export module Converter {
   let browser: puppeteer.Browser;
   let htmlPath: string;
   let page: puppeteer.Page;
 
-  export async function load(_htmlPath: string) {
-    htmlPath = _htmlPath;
+  export async function load() {
+    htmlPath = `${PathMap.root}${User.config.setting.build.htmlPath}`;
     browser = await puppeteer.launch();
     page = await browser.newPage();
     await page.setUserAgent('Deploy');

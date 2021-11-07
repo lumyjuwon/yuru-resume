@@ -3,14 +3,12 @@ import { promises as fs } from 'fs';
 
 import { PathMap } from '../pathMap';
 import { User } from '../user';
+import { Args } from '../utils/args';
 
 type ResumeConfig = { filenames: string[]; downloadFiles: { [lang: string]: { png: string; pdf: string } } };
 
 export module Prebuild {
-  export interface Options {
-    repo_url: string;
-    branch: string;
-  }
+  export interface Options {}
 
   async function applyPageConfig() {
     function searchTarget(target: string, regex: RegExp): string {
@@ -49,7 +47,7 @@ export module Prebuild {
     await fs.writeFile(destIndexHtmlPath, replacedIndexHtml);
   }
 
-  async function applyResumeConfig(repoUrl: string, branch: string) {
+  async function applyResumeConfig() {
     const resumeNames = await fs.readdir(`${PathMap.userPath}/resumes`);
 
     // Create resume-config.json
@@ -63,7 +61,7 @@ export module Prebuild {
     });
 
     const setting = User.config.setting;
-    const downloadUrl = `${repoUrl}/raw/${branch}`;
+    const downloadUrl = `${Args.args.keyValue.repo_url}/raw/${Args.args.keyValue.branch}`;
     for (const lang of langs) {
       resumeConfig['downloadFiles'][lang] = {
         png: `${downloadUrl}${setting.image.outputPath}/${lang}.png`,
@@ -84,10 +82,10 @@ export module Prebuild {
     }
   }
 
-  export async function run(options: Options) {
+  export async function run(options?: Options) {
     console.log('Running Prebuild');
 
-    const applies = [applyPageConfig(), applyResumeConfig(options.repo_url, options.branch)];
+    const applies = [applyPageConfig(), applyResumeConfig()];
     await Promise.all(applies);
 
     console.log('Complete Prebuild');

@@ -2,8 +2,9 @@ export module Args {
   type BooleanKey = keyof typeof args.boolean;
   type KeyValueKey = keyof typeof args.keyValue;
 
-  const args = {
+  export const args = {
     boolean: {
+      '-is_github_action': process.env.CI !== undefined,
       '-prebuild': false
     },
     keyValue: {
@@ -13,6 +14,10 @@ export module Args {
   };
 
   function validateArgs() {
+    if (!args.boolean['-is_github_action']) {
+      return;
+    }
+
     for (const keyValueKey of Object.keys(args.keyValue)) {
       if (args.keyValue[keyValueKey as KeyValueKey] === '') {
         throw new Error(`${keyValueKey} should be initilized`);
@@ -21,6 +26,10 @@ export module Args {
   }
 
   function parse() {
+    if (!args.boolean['-is_github_action']) {
+      return;
+    }
+
     args.keyValue.branch = args.keyValue.branch.replace('refs/heads/', '');
   }
 
@@ -44,7 +53,5 @@ export module Args {
 
     validateArgs();
     parse();
-
-    return args;
   }
 }

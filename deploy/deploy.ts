@@ -9,35 +9,27 @@ import { PathMap, validatePathMap } from './src/pathMap';
 import { Converter } from './src/thirdParties/converter';
 
 (async () => {
-  const args = Args.parseArgs(process.argv);
+  Args.parseArgs(process.argv);
   await validatePathMap();
   await User.load();
 
-  const prebuildOptions: Prebuild.Options = {
-    repo_url: args.keyValue.repo_url,
-    branch: args.keyValue.branch
-  };
-
   // Build
-  if (args.boolean['-prebuild']) {
-    await Prebuild.run(prebuildOptions);
+  if (Args.args.boolean['-prebuild']) {
+    await Prebuild.run();
     return;
   }
 
-  await Prebuild.run(prebuildOptions);
+  await Prebuild.run();
   await Build.run();
-  await Afterbuild.run({
-    pagePath: User.config.setting.build.pagePath
-  });
+  await Afterbuild.run();
 
   // Convert
-  const htmlPath = `${PathMap.root}${User.config.setting.build.htmlPath}`;
   const resumeFileNames = Object.keys(User.config.resumes).map((fileName: string) => {
     const extname = path.extname(fileName);
     return fileName.replace(extname, '');
   });
 
-  await Converter.load(htmlPath);
+  await Converter.load();
 
   for (const resumeFileName of resumeFileNames) {
     const lang = resumeFileName.replace('.json', '');

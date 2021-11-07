@@ -2,11 +2,11 @@ import fsExtra from 'fs-extra';
 
 import { PathMap } from '../pathMap';
 
-export module Afterbuild {
-  interface Options {
-    pagePath: string;
-  }
+interface Options {
+  pagePath: string;
+}
 
+export module Afterbuild {
   async function release(pagePath: string) {
     const buildNames = fsExtra.readdirSync(`${PathMap.clientPath}/build`);
     const moves = [];

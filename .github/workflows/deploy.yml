@@ -35,7 +35,7 @@ jobs:
 
       - name: Deploy resume
         working-directory: deploy
-        run: yarn run deploy
+        run: yarn run deploy branch=$GITHUB_REF
 
       - name: Commit
         run: |

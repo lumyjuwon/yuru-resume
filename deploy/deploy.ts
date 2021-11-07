@@ -3,23 +3,27 @@ import path from 'path';
 import { Build } from './src/build/build';
 import { Afterbuild } from './src/build/afterbuild';
 import { Prebuild } from './src/build/prebuild';
-import { Args } from './src/args';
+import { Args } from './src/utils/args';
 import { User } from './src/user';
 import { PathMap, validatePathMap } from './src/pathMap';
 import { Converter } from './src/thirdParties/converter';
 
 (async () => {
+  const args = Args.parseArgs(process.argv);
   await validatePathMap();
   await User.load();
 
-  const args = Args.parseArgs(process.argv);
-  if (args['-prebuild']) {
-    await Prebuild.run();
+  const prebuildOptions = {
+    branch: args.keyValue.branch
+  };
+
+  // Build
+  if (args.boolean['-prebuild']) {
+    await Prebuild.run(prebuildOptions);
     return;
   }
 
-  // Build
-  await Prebuild.run();
+  await Prebuild.run(prebuildOptions);
   await Build.run();
   await Afterbuild.run({
     pagePath: User.config.setting.build.pagePath
@@ -49,4 +53,7 @@ import { Converter } from './src/thirdParties/converter';
   }
 
   await Converter.close();
-})();
+})().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

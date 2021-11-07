@@ -8,7 +8,6 @@ interface Config {
   setting: {
     host: {
       url: string;
-      branch: string;
     };
     build: {
       pagePath: string;
@@ -31,8 +30,7 @@ export module User {
   export const config: Config = {
     setting: {
       host: {
-        url: '',
-        branch: ''
+        url: ''
       },
       build: {
         pagePath: '',

@@ -6,6 +6,10 @@ import { User } from '../user';
 
 type ResumeConfig = { filenames: string[]; downloadFiles: { [lang: string]: { png: string; pdf: string } } };
 
+interface Options {
+  branch: string;
+}
+
 export module Prebuild {
   async function applyPageConfig() {
     function searchTarget(target: string, regex: RegExp): string {
@@ -44,7 +48,7 @@ export module Prebuild {
     await fs.writeFile(destIndexHtmlPath, replacedIndexHtml);
   }
 
-  async function applyResumeConfig() {
+  async function applyResumeConfig(branch: string) {
     const resumeNames = await fs.readdir(`${PathMap.userPath}/resumes`);
 
     // Create resume-config.json
@@ -58,7 +62,7 @@ export module Prebuild {
     });
 
     const setting = User.config.setting;
-    const downloadUrl = `${setting.host.url}/raw/${setting.host.branch}`;
+    const downloadUrl = `${setting.host.url}/raw/${branch}`;
     for (const lang of langs) {
       resumeConfig['downloadFiles'][lang] = {
         png: `${downloadUrl}${setting.image.outputPath}/${lang}.png`,
@@ -79,10 +83,10 @@ export module Prebuild {
     }
   }
 
-  export async function run() {
+  export async function run(options: Options) {
     console.log('Running Prebuild');
 
-    const applies = [applyPageConfig(), applyResumeConfig()];
+    const applies = [applyPageConfig(), applyResumeConfig(options.branch)];
     await Promise.all(applies);
 
     console.log('Complete Prebuild');

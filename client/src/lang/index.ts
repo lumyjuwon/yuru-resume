@@ -4,12 +4,27 @@ import Detector, { DetectorOptions } from 'i18next-browser-languagedetector';
 
 import { resumeFilenames } from '../resources';
 
-export function getCurrentLangCode() {
-  return i18n.language;
+interface Languages {
+  [code: string]: {
+    translation: any;
+  };
 }
 
-export function trans(key: string) {
-  return i18n.t(key, { returnObjects: true }) as any;
+interface LangCodes {
+  [code: string]: string;
+}
+
+export function getCurrentLangCode() {
+  if (langCodes[i18n.language]) {
+    return i18n.language;
+  } else {
+    return defaultLangCode;
+  }
+}
+
+export function trans(key: string): any {
+  console.log(i18n.t(key, { returnObjects: true }));
+  return i18n.t(key, { returnObjects: true });
 }
 
 export function changeLangCode(code: string) {
@@ -20,16 +35,6 @@ export function changeLangCode(code: string) {
   searchParams.set('lang', changedCode);
   const newRelativePathQuery = `${window.location.pathname}?${searchParams.toString()}`;
   window.history.replaceState(null, '', newRelativePathQuery);
-}
-
-interface Languages {
-  [code: string]: {
-    translation: any;
-  };
-}
-
-interface LangCodes {
-  [code: string]: string;
 }
 
 export const langCodes: LangCodes = {};
@@ -52,5 +57,5 @@ detector.init(options);
 
 i18n.use(detector).use(initReactI18next).init({
   resources: languages,
-  fallbackLng: languages[defaultLangCode]
+  fallbackLng: defaultLangCode
 });

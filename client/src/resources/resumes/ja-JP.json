@@ -1,0 +1,95 @@
+{
+  "profile":{
+    "name":"「島凛」",
+    "email":"「rinshima@camp.com」",
+    "github": "https://github.com/lumyjuwon/lumy-resume",
+    "linkedin": "https://www.linkedin.com/in/rin-shima",
+    "about": "私はゆる会社で働いており,開発を担当しています。私の目的は最高の履歴書テンプレートを開発することです。私が作った履歴書をたくさんの人が使ってくれたら嬉しいです。"
+  },
+  "skills":{
+    "main": {
+      "Language": "TypeScript",
+      "Front": "React,React-Native,Styled-Component",
+      "Back-End":"「Node.js」"
+    },
+    "additional": {
+      "Languages": "Python,Java,C＃,C ++",
+      "Front-End":"「Apollo-Client」",
+      "Back-End":"「Nextjs,Express,Mongoose,Apollo-Server」"
+    }
+  },
+  "experiences":[
+    {
+      "company":"「ゆる」",
+      "startDate": "2021-02",
+      "projects":[
+        {
+          "name": "lumy-resume",
+          "description": "なんて良い履歴書！lumy-resumeは最も簡単な履歴書です。",
+          "whatIdoTitle":"「責任」",
+          "whatIdo":["コンテンツのデザインと開発"],
+          "period":"「2021.10〜今」",
+          "skills":[
+            "「Typescript」",
+            "「反応する」",
+            "「スタイル付きコンポーネント」"
+          ]
+        },
+        {
+          "name":"「ゆるキャン△」",
+          "description":"「仮想」",
+          "whatIdoTitle":"「責任」",
+          "whatIdo":["AndroidおよびiOSアプリケーションの開発", "コンテンツの計画"],
+          "skills":["React-Native", "Typescript", "Android", "iOS", "Firebase", "Redux", "Redux-Saga", "Redux-Persist", "WebView"],
+          "period":"「2021.03〜2021.09」",
+          "urls":[
+            "https://play.google.com/store/apps/details?id=jp.co.gemdrops.lbca2",
+            "https://apps.apple.com/kr/app/%EC%9C%A0%EB%A3%A8%EC%BA%A0-virtual-camp-%EB%AA%A8%ED%86%A0 ％EC％8A％A4％ED％98％B8-％ED％8E％B8 / id155413290631 "
+          ]
+        }
+      ]
+    },
+    {
+      "company":"「キャンプ」",
+      "startDate": "2020-03",
+      "endDate": "2021-01",
+      "projects":[
+        {
+          "name": "みんなのためのマッピング！",
+          "description":"「キャンプに最適な場所を見つける」",
+          "whatIdoTitle":"「責任」",
+          "whatIdo": [
+            "「キャッピングロジックに最適な場所を見つけることを開発する」",
+            "「開発者の管理」"
+          ],
+          "period":"「2020.03〜2021.01」",
+          "skills":["Python", "Tensorflow"]
+        }
+      ]
+    }
+  ],
+  "toyProjects":[
+    {
+      "name": "lumy-resume",
+      "description": "なんて良い履歴書！lumy-resumeは最も簡単な履歴書です。",
+      "whatIdoTitle":"「責任」",
+      "whatIdo":["コンテンツのデザインと開発"],
+      "skills":[
+        "「Typescript」",
+        "「反応する」",
+        "「スタイル付きコンポーネント」"
+      ],
+      "period":"「2020.10〜2020.12」",
+      "urls":[
+        "「https://github.com/lumyjuwon/lumy-resume」",
+        "「https://lumyjuwon.github.io/lumy-resume/sample/」"
+      ]
+    }
+  ],
+  "educations":[
+    {
+      "title": "キャンプ（休暇）",
+      "period": "（2021〜）"
+    }
+  ]
+}

@@ -8,6 +8,9 @@ on:
     branches: [master]
   workflow_dispatch:
 
+env:
+  CI: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

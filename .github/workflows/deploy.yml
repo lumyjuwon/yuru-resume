@@ -25,12 +25,11 @@ jobs:
         with:
           node-version: '14.x'
 
+      - name: Install Langauge pack
+        run: sudo apt-get install libfontenc1 libxfont1 xfonts-encodings xfonts-utils xfonts-base xfonts-75dpi && sudo apt-get install language-pack-ko && sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
+
       - name: Install yarn
         run: npm install -g yarn
-
-      - name: Install client dependencies
-        working-directory: client
-        run: yarn install
 
       - name: Install deploy dependencies
         working-directory: deploy

@@ -3,7 +3,7 @@ import { Utils } from '../utils/utils';
 
 export module Build {
   async function buildReact(): Promise<void> {
-    await Utils.exec(`cd ${PathMap.clientPath} && yarn`);
+    await Utils.exec(`cd ${PathMap.clientPath} && yarn install`);
     await Utils.exec(`cd ${PathMap.clientPath} && yarn run build`);
   }
 

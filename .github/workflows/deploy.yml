@@ -25,10 +25,6 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
 
-      - name: Install client dependencies
-        working-directory: client
-        run: yarn install
-
       - name: Install deploy dependencies
         working-directory: deploy
         run: yarn install

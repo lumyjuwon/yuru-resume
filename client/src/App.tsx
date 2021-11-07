@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 import { Profile, Experience, Education, Skills, ToyProject } from './components';
-import { changeLang } from './lang';
-import { useTranslation } from 'react-i18next';
 import { ToolHeader } from './components/common/toolHeader';
+import { changeLang } from './lang';
 
 const Container = styled.div({
   width: '52%',
@@ -38,8 +38,10 @@ function App() {
   useTranslation();
 
   useEffect(() => {
-    changeLang(searchParams['lang']);
-  }, []);
+    if (searchParams['lang']) {
+      changeLang(searchParams['lang']);
+    }
+  });
 
   return (
     <Container>

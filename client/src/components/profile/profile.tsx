@@ -14,7 +14,8 @@ const Icon = styled.img({
 });
 
 const Info = styled.a({
-  fontSize: '14px'
+  fontSize: '14px',
+  color: 'inherit'
 });
 
 interface IconInfoProps {

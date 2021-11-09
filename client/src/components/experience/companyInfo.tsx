@@ -40,7 +40,7 @@ export function CompanyInfo(props: Props) {
     if (endDate !== undefined) {
       calcedEmployedPeriod += ` ${endDate.getFullYear()}.${endDate.getMonth() + 1}`;
     } else {
-      calcedEmployedPeriod += ' 현재';
+      calcedEmployedPeriod += ' Present';
     }
 
     return calcedEmployedPeriod;
@@ -52,15 +52,16 @@ export function CompanyInfo(props: Props) {
     const year = _endDate.getFullYear() - startDate.getFullYear();
     const month = _endDate.getMonth() - startDate.getMonth() + 1;
     const periodMonth = year * 12 + month;
+    const periodYear = Math.floor(periodMonth / 12);
 
     let displayDate: string;
 
-    if (year === 0) {
-      displayDate = `(${periodMonth % 12}개월)`;
+    if (periodYear === 0) {
+      displayDate = `(${periodMonth % 12}M)`;
     } else if (month === 0) {
-      displayDate = `(${Math.floor(periodMonth / 12)}년)`;
+      displayDate = `(${periodYear}Y)`;
     } else {
-      displayDate = `(${Math.floor(periodMonth / 12)}년 ${periodMonth % 12}개월)`;
+      displayDate = `(${periodYear}Y ${periodMonth % 12}M)`;
     }
     return displayDate;
   }

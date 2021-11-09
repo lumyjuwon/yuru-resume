@@ -108,7 +108,8 @@ const Container = styled.div({
   display: 'flex',
   marginBottom: '36px',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+  userSelect: 'none'
 });
 
 export function Header() {

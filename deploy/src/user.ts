@@ -6,9 +6,6 @@ import { PathMap } from './pathMap';
 
 interface Config {
   setting: {
-    host: {
-      url: string;
-    };
     build: {
       pagePath: string;
       htmlPath: string;
@@ -29,9 +26,6 @@ interface Config {
 export module User {
   export const config: Config = {
     setting: {
-      host: {
-        url: ''
-      },
       build: {
         pagePath: '',
         htmlPath: ''

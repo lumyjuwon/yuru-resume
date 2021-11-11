@@ -3,15 +3,18 @@
 2. Click **Generate new token** button
 3. Must set **Expiration** to `No expiration`
 4. Select scopes as follow as:  
-**repo**  
+```
+repo  
 　repo:status ✅  
 　repo_deployment ✅  
 　public_repo ✅  
 　security_events ✅  
-**admin:repo_hook**  
+
+admin:repo_hook  
 　write:repo_hook ✅  
 　read:repo_hook ✅  
-1. Copy generated token
+```
+5. Copy generated token
 
 ## Create Repository Secret
 1. Move to a forked resume repository in browser

@@ -38,7 +38,7 @@ jobs:
 
       - name: Commit
         run: |
-          git config --global user.name $GITHUB_ACTOR
+          git config --global user.name "Camp Bot"
           git add -A
           git commit -m "Deploy resume"
 

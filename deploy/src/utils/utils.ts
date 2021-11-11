@@ -13,6 +13,7 @@ export module Utils {
           console.error(stderr);
         }
 
+        console.log(`Complete Command: ${command}`);
         resolve(stdout);
       });
     });

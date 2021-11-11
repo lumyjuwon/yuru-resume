@@ -1,5 +1,5 @@
 # Customize
-in `lumy-resume/user` folder you can customize your resume with json file.
+in `yuru-resume/user` folder you can customize your resume with json file.
 
 ## user > page.json
 Set your resume info  

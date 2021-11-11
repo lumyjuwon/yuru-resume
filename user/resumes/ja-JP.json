@@ -2,7 +2,7 @@
   "profile":{
     "name":"「島凛」",
     "email":"「rinshima@camp.com」",
-    "github": "https://github.com/lumyjuwon/lumy-resume",
+    "github": "https://github.com/lumyjuwon/yuru-resume",
     "linkedin": "https://www.linkedin.com/in/rin-shima",
     "about": "私はゆる会社で働いており,開発を担当しています。私の目的は最高の履歴書テンプレートを開発することです。私が作った履歴書をたくさんの人が使ってくれたら嬉しいです。"
   },
@@ -24,8 +24,8 @@
       "startDate": "2021-02",
       "projects":[
         {
-          "name": "lumy-resume",
-          "description": "なんて良い履歴書！lumy-resumeは最も簡単な履歴書です。",
+          "name": "yuru-resume",
+          "description": "なんて良い履歴書！yuru-resumeは最も簡単な履歴書です。",
           "whatIdoTitle":"「責任」",
           "whatIdo":["コンテンツのデザインと開発"],
           "period":"「2021.10〜今」",
@@ -70,8 +70,8 @@
   ],
   "toyProjects":[
     {
-      "name": "lumy-resume",
-      "description": "なんて良い履歴書！lumy-resumeは最も簡単な履歴書です。",
+      "name": "yuru-resume",
+      "description": "なんて良い履歴書！yuru-resumeは最も簡単な履歴書です。",
       "whatIdoTitle":"「責任」",
       "whatIdo":["コンテンツのデザインと開発"],
       "skills":[
@@ -81,8 +81,8 @@
       ],
       "period":"「2020.10〜2020.12」",
       "urls":[
-        "「https://github.com/lumyjuwon/lumy-resume」",
-        "「https://lumyjuwon.github.io/lumy-resume/sample/」"
+        "「https://github.com/lumyjuwon/yuru-resume」",
+        "「https://lumyjuwon.github.io/yuru-resume/sample/」"
       ]
     }
   ],

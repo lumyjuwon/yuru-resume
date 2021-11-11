@@ -2,7 +2,7 @@
   "profile": {
     "name": "린 시마",
     "email": "rinshima@camp.com",
-    "github": "https://github.com/lumyjuwon/lumy-resume",
+    "github": "https://github.com/lumyjuwon/yuru-resume",
     "linkedin": "https://www.linkedin.com/in/rin-shima",
     "about": "I'm working at a yuru company and I'm in charge of development. my purpose is developing the best resume template. I would be happy if so many people are using resume i made"
   },
@@ -24,8 +24,8 @@
       "startDate": "2021-02",
       "projects": [
         {
-          "name": "lumy-resume",
-          "description": "What a good resume! lumy-resume is the simplest resume.",
+          "name": "yuru-resume",
+          "description": "What a good resume! yuru-resume is the simplest resume.",
           "whatIdoTitle": "Responsibilities",
           "whatIdo": ["Content design and development"],
           "period": "2021.10 ~ Now",
@@ -71,7 +71,7 @@
   "toyProjects": [
     {
       "name": "레쥬메",
-      "description": "What a good resume! lumy-resume is the simplest resume.",
+      "description": "What a good resume! yuru-resume is the simplest resume.",
       "whatIdoTitle": "Responsibilities",
       "whatIdo": ["Content design and development"],
       "skills": [
@@ -81,8 +81,8 @@
       ],
       "period": "2020.10 ~ 2020.12",
       "urls": [
-        "https://github.com/lumyjuwon/lumy-resume",
-        "https://lumyjuwon.github.io/lumy-resume/sample/"
+        "https://github.com/lumyjuwon/yuru-resume",
+        "https://lumyjuwon.github.io/yuru-resume/sample/"
       ]
     }
   ],

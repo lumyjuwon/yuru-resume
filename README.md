@@ -10,10 +10,10 @@ https://lumyjuwon.github.io/lumy-resume/sample/
 1. **fork** this project in the github  
 
 2. set this repository secret **GIT_TOKEN**  
-https://lumyjuwon.github.io/lumy-resume/docs/git_token
+https://github.com/lumyjuwon/lumy-resume/blob/master/docs/CUSTOMIZE.md
    
 3. customize your resume  
-https://lumyjuwon.github.io/lumy-resume/docs/customize
+https://github.com/lumyjuwon/lumy-resume/blob/master/docs/GIT_TOKEN.md
 
 1. deploy the resume  
 When finished customizing then go to actions and click **Run workflow** of Node.js CI

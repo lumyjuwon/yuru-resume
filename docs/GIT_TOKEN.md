@@ -17,8 +17,8 @@ admin:repo_hook
 5. Copy generated token
 
 ## Create Repository Secret
-1. Move to a forked resume repository in browser
-2. Move to Settings > Secrets  
+1. Move to the forked resume repository in browser
+2. Move to **Settings > Secrets**  
 3. Click **New Repository secret** button
 4. Must Set name as **GIT_TOKEN** and patse the copied generated token
 

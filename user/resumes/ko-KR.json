@@ -8,7 +8,7 @@
   },
   "skills": {
     "main": {
-      "Language": "타입스크립트",
+      "Language": "Typescript",
       "Front-End": "React, React-Native, Styled-Component",
       "Back-End": "Node.js"
     },
@@ -70,7 +70,7 @@
   ],
   "toyProjects": [
     {
-      "name": "레쥬메",
+      "name": "yuru-resume",
       "description": "What a good resume! yuru-resume is the simplest resume.",
       "whatIdoTitle": "Responsibilities",
       "whatIdo": ["Content design and development"],
@@ -88,7 +88,7 @@
   ],
   "educations": [
     {
-      "title": "켐핑",
+      "title": "캠핑",
       "period": "(2021 ~)"
     }
   ]

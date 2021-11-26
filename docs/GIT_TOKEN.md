@@ -20,6 +20,6 @@ admin:repo_hook
 1. Move to the forked resume repository in browser
 2. Move to **Settings > Secrets**  
 3. Click **New Repository secret** button
-4. Must Set name as **GIT_TOKEN** and patse the copied generated token  
+4. Must Set name as "**GIT_TOKEN**" and patse the copied generated token  
    
 🎉Congratulations setting is complete !🎉

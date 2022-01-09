@@ -1,7 +1,7 @@
 ## Create Personal Access Token
 1. Move to https://github.com/settings/tokens
 2. Click **Generate new token** button
-3. Must set **Expiration** to `No expiration`
+3. Set **Expiration** to `No expiration` (Recommend)
 4. Select scopes as follow as:  
 ```
 repo  

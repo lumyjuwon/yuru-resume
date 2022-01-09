@@ -22,4 +22,5 @@ admin:repo_hook
 3. Click **New Repository secret** button
 4. Must Set name as "**GIT_TOKEN**" and patse the copied generated token  
    
-🎉Congratulations setting is complete !🎉
+🎉Congratulations setting is complete !🎉  
+[Next Docs](https://github.com/lumyjuwon/yuru-resume/blob/master/docs/CUSTOMIZE.md)(customize resume)
